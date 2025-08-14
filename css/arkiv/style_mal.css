@@ -1,0 +1,2247 @@
+/*
+* Style.css - Versión Corregida Final para Móviles con Menú Hamburguesa Funcionando
+* Main stylesheet for LJUDTOPIA website
+*/
+
+/* =============================== GLOBAL STYLES === */
+:root {
+    /* Color palette */
+    --dark-blue: #0f233b;
+    --blue: #2d3e50;
+    --light-gray: #f5f5f5;
+    --gray: #e4e4e4;
+    --white: #ffffff;
+    --accent-yellow: #ffcc00;
+    --amarillo-azufre: #edff21;
+    --beige-Arena: #ece2c6;
+    --beige-blanco-perla: #eae6ca;
+    --beige-lino: #d7d0b7;
+    --beige-lino-light: #ebe8db;
+    --beige-lino-ultralight: #f6f4ef;
+    --beige-wheat: #f5deb3;
+    --red-ketchup: #c5000b;
+    --text-dark: #333333;
+    --text-light: #888888;
+    --verde-tapete-casino: #144758;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: #fff;
+    overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--text-light);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Cursiva para elementos términos en español <em> por defecto */
+em, i {
+  font-style: italic;
+}
+
+
+/* ========================================== HEADER === */
+.site-header {
+    background-color: var(--dark-blue);
+    padding: 0;
+    position: relative; /* Importante para el menú móvil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+}
+
+/* Logo ocupa el mismo ancho que la sidebar */
+.logo {
+    width: 260px;
+    background-color: var(--dark-blue);
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* border-right: 1px solid rgba(255, 255, 255, 0.1); */
+    flex-shrink: 0;
+}
+
+.logo a {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-img {
+    max-height: 80px;
+    width: auto;
+    margin-bottom: 0px;
+}
+
+.logo .tagline {
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.8);
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Área derecha para selectores de idioma y hamburguesa */
+.header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center;
+    margin-top: 40px;
+    padding: 10px 5px;
+    background-color: var(--dark-blue);
+}
+
+/* =======================================Selectores de idioma (visible en desktop) */
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 20px;
+}
+
+.language-selector a {
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.language-selector a:hover,
+.language-selector a.active {
+    opacity: 1;
+}
+
+.language-selector img {
+    width: 24px;
+    height: auto;
+}
+
+/* ===============Menú toggle (hamburguesa) - OCULTO EN DESKTOP, MOSTRADO EN MOBILE */
+.menu-toggle {
+    display: none; /* Oculto por defecto en desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1002; /* Más alto que el menú y el header */
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animación de la 'X' para el menú hamburguesa */
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* =============================================== NAVIGATION DESKTOP === */
+.main-nav {
+    background-color: var(--dark-blue);
+    padding-top: 2px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+    /* Estilos para desktop */
+    display: block; /* Asegura que se muestre en desktop */
+    position: relative; /* Ocupa el flujo normal */
+    z-index: 998; /* Por debajo del header, pero por encima del contenido */
+}
+
+.main-nav .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-nav ul {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 240px; /* Alinear con el contenido, no con el logo */
+}
+
+.main-nav li {
+    margin-right: 30px;
+}
+
+.main-nav a {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    letter-spacing: 1px;
+    padding: 5px 0;
+    position: relative;
+}
+
+.main-nav a span {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+.main-nav a:hover,
+.main-nav li.active a {
+    color: var(--accent-yellow);
+}
+
+.main-nav li.active a:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-yellow);
+}
+
+/* ============================================= MAIN CONTENT STRUCTURE === */
+main {
+    display: flex;
+    min-height: calc(100vh - 150px); /* 150px es la altura combinada de header y footer aprox. */
+}
+
+.referencias-page main {
+    background-color: var(--dark-blue) !important;
+    min-height: 100vh !important;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: var(--dark-blue);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 150px);
+    flex-shrink: 0;
+}
+
+.referencias-page .sidebar {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    background-color: var(--dark-blue) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 240px !important;
+    overflow: hidden !important;
+}
+
+.referencias-page .sidebar-image {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--dark-blue) !important;
+}
+
+.referencias-page .sidebar-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.sidebar-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.sidebar-image img {
+    width: 100%;
+    /* height: 50%; */
+    object-fit: cover;
+}
+
+.sidebar-logoLJ {
+    height: 200px;
+    overflow: hidden;
+}
+
+.sidebar-logoLJ img {
+    height: 100%;
+    /* position: relative; */
+    margin: 200 auto;  /* Centrado horizontal */
+    padding-left: 30px;
+    padding-top: 10px;
+    /* height: 50%; */
+    /* object-fit: cover; */
+}
+
+
+.familia-image {
+    height: 200px;         /* Altura fija */
+    overflow: hidden;      /* Recorta el exceso de contenido */
+    margin-top: 500px;     /* Margen superior grande (posiblemente para desplazarla hacia abajo) */
+    /* float: left; */     /* Comentado: no aplicaba flotación */
+    /* width: 33%; */      /* Comentado: no definía ancho */
+}
+
+.familia-image img {
+    width: 100%;          /* Ocupaba el 100% del contenedor */
+    height: 100%;         /* Altura igual al contenedor (200px) */
+    object-fit: cover;    /* Ajuste de imagen (recortaba para cubrir el espacio) */
+    /* width: 50%; */     /* Comentado: no se aplicaba */
+    /* max-height: 500px; *//* Comentado: no se aplicaba */
+}
+
+.casita-image {
+    width: 100%;          /* Ocupa todo el ancho del sidebar (240px) */
+    overflow: hidden;     /* Evita desbordamientos */
+    margin: 100px 0;       /* Margen superior e inferior */
+    display: flex;        /* Usamos flexbox para centrar */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente (opcional) */
+}
+
+.casita-image img {
+    width: 70%;          /* Reduce al 80% del ancho del sidebar */
+    height: auto;        /* Mantiene proporciones */
+    object-fit: contain; /* Asegura que la imagen no se recorte */
+    display: block;      /* Elimina espacios no deseados */
+    margin: 0 auto;      /* Centrado adicional (redundante con flexbox) */
+}
+
+.sidebar-nav {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: var(--dark-blue);
+}
+
+.sidebar-nav a {
+    color: #fff;
+    padding: 10px 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a:hover,
+.sidebar-nav a.active {
+    color: var(--accent-yellow);
+}
+
+.content-area {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--white);
+    min-width: 0;
+}
+
+.lista-sangrada01 li {
+    font-size: 15px;
+    padding-left: 5px; /* Sangrado uniforme */
+    }
+.custom-tab01 {
+    font-size: 15px;
+    margin-left: 30px;
+    }
+
+/* ==================== RESTO DE ESTILOS (sin cambios, exceptuando media queries) === */
+.inicio h2,
+.servicios h2,
+.referencias h2,
+.deutsch-content h2,
+.swedish-content h2,
+.english-content h2 {
+    border-bottom: 1.5px solid var(--dark-blue);
+    color: var(--dark-blue);
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    /* margin-top: 10px; */
+    padding-bottom: 0px;
+}
+
+.sobre-nosotros h3,
+.health-text h3,
+.acoustic-section h3,
+.swedishinspiration-section h3,
+.arquitectura-salud h3,
+.valor-proyecto h3,
+.metodo-trabajo h3,
+.sostenibilidad h3,
+.lista-servicios h3,
+.other-works h3,
+.reference-column h3,
+.about-section h3,
+.services-section h3,
+.deutsch-content h3,
+.swedish-content h3,
+.english-content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    color: var(--dark-blue);
+}
+
+.intro-text p,
+.valor-proyecto p,
+.metodo-trabajo p,
+.sostenibilidad p,
+.acustica-servicios p,
+.deutsch-content p,
+.swedish-content p,
+.english-content p {
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* =========================================== TEAM - INFO === */
+
+.team-info {
+    background-color: var(--light-gray);
+    border: 1px solid #ccc;
+    margin: 15px auto;
+    padding: 5px;
+    position: relative;
+    width: 630px;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 130px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-left: auto;  /* Esto empuja el contenedor a la derecha */
+    margin-right: 0px; /* Mantiene el margen derecho */
+}
+
+/* Estilos para el texto */
+.team-text {
+    flex: 1;
+    padding: 5px;
+    text-align: right;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.team-text p {
+    font-size: 12px;
+    line-height: 1.25;
+    margin-bottom: 5px;
+}
+
+.team-text p.bold {
+    font-size: 13px;
+    /* font-weight: bold; */
+    margin-bottom: 8px;
+    padding-right: 5px;
+}
+
+.team-text p.texto-derecha {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding-right: 5px;
+}
+
+/* Estilos para la foto */
+.team-photo {
+    margin-left: 10px;
+    padding: 5px;
+    align-self: center;
+}
+
+.team-photo img {
+    border-radius: 2px;
+    max-height: 105px;
+    width: auto;
+}
+
+/* =========================================== LANGUAGES === */
+
+.language-help {
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.language-help > p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.language-options {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.lang-option {
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.lang-option:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-option a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.lang-option a:hover {
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.lang-option img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.lang-option h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: var(--dark-blue);
+}
+
+.lang-option p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ======================================================== SERVICES PAGE STYLES === */
+.valor-proyecto {
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    margin: 20px 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+.valor-proyecto h4 {
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+}
+
+.value-points {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.value-points li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 5px;
+}
+
+.metodo-trabajo {
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    margin: 30px 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+}
+
+.method-points {
+    font-size: 15px;
+    padding-left: 5px;
+    margin: 15px 0;
+}
+
+.method-points li {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sostenibilidad {
+    background-color: var(--light-gray);
+    border-radius: 5px;
+    margin: 30px 0;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-bottom: 2px;
+    padding-top: 10px;
+    text-align: left;
+}
+
+
+.lista-servicios {
+    background-color: var(--beige-lino-ultralight);
+    /* border-top: 1px solid #e0e0e0; */
+    /* font-weight: 800; */
+    /* font-size: 20px; */
+    /* margin-top: 10px; */
+    padding: 10px;
+    /* padding-top: 10px; */
+}
+
+.lista-servicios h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    color: var(--dark-blue);
+}
+
+.lista-servicios li {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 18px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+.lista-servicios p {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 8px;
+    margin-left: 18px;
+    padding-left: 10px;
+}
+
+.lista-servicios ul {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 36px;
+    padding-left: 0px;
+}
+
+.lista-servicios h5 {
+    font-size: 14px;
+    font-weight: 100;
+    margin-bottom: 0px;
+    margin-left: 50px;
+    color: var(--dark-blue);
+}
+
+
+.service-columns {
+    column-gap: 10px;
+    display: flex;
+    margin: 0 0;
+    /* gap: 5px; */
+}
+
+.service-columns li {
+    font-weight: 500;
+    margin-bottom: 8px;
+    margin-left: 15px;
+    padding-left: 15px;
+}
+
+.service-columns p {
+    font-size: 15px;
+    margin-left: 30px;
+    padding-left: 50px;
+    /* margin-right: 30px; */
+    margin-bottom: 10px;
+    /* text-align: justify; */
+}
+
+.service-columns ul {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.column {
+    flex: 1;
+    margin-left: 0px;
+    padding: 0 10px;
+}
+
+.column li {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    margin-left: 8px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+.column ul {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    padding-left: 0px;
+}
+
+
+.acustica-servicios {
+    margin: 10px 0;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-bottom: 0.5px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+}
+
+.acustica-servicios ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+
+.acustica-expertise {
+    background-color: var(--beige-lino);
+    /* border: 1px solid #ccc; /* Solo para visualización */
+    /* border-top: 1px dashed #ccc; */
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column; /* Título arriba */
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* margin-left: 15px; */
+    /* max-width: fit-content; */
+    min-height: 260px;
+    /* overflow: auto; /* Para permitir scroll si el texto desborda */
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    position: relative;  /* Necesario para que el hijo absolute se posicione respecto a este contenedor */
+    resize: both;   /* Permite redimensionar el contenedor (opcional) */
+}
+
+.acustica-expertise h4 {
+    color: var(--dark-blue);
+    flex-shrink: 0; /* Evita que el título se encoja */
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.acustica-expertise p {
+    display: flex;
+    /* flex: 2; */
+    flex-direction: column-reverse; /* Texto anclado abajo */
+    flex-grow: 1; /* Ocupa el espacio restante */
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 340px;
+    /* margin-top: 160px; */
+    overflow: auto; /* Scroll si el texto desborda */
+    position: relative;
+    text-align: left;
+}
+
+.media-buttons {
+    background-color: var(--beige-lino);
+    /* border: 1px solid #ccc; /* Solo para visualización */
+    /* border-top: 1px dashed #ccc; */
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column; /* Título arriba */
+    /* margin: 0 auto; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* margin-left: 15px; */
+    /* max-width: fit-content; */
+    min-height: 260px;
+    /* overflow: auto; /* Para permitir scroll si el texto desborda */
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    position: relative;  /* Necesario para que el hijo absolute se posicione respecto a este contenedor */
+    resize: both;   /* Permite redimensionar el contenedor (opcional) */
+}
+
+.media-buttons h4 {
+    color: var(--dark-blue);
+    flex-shrink: 0; /* Evita que el título se encoja */
+    font-size: 20px;
+    font-weight: 100;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    position: relative;
+}
+
+.media-buttons p {
+    display: flex;
+    /* flex: 2; */
+    flex-direction: column-reverse; /* Texto anclado abajo */
+    flex-grow: 1; /* Ocupa el espacio restante */
+    font-size: 15px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    margin-right: 340px;
+    /* margin-top: 160px; */
+    overflow: auto; /* Scroll si el texto desborda */
+    position: relative;
+    text-align: left;
+}
+
+.restaurant-photo {
+    flex: 1;
+    /* display: flex;
+    /* display: grid;
+    /* grid-template-columns: 1fr;
+    /* padding-top: 0px;         /* Margen superior */
+    justify-content: right;   /* align-items: top; */
+    /* justify-items: right;        /* Alinea a la derecha */
+    position: absolute;
+    /* top: 12px;      /* 10px desde el margen superior del contenedor */
+    padding-right: 0px;       /* Margen derecho */
+    padding-top: 15px;     /* Margen superior */
+    /* padding-bottom: 10px;  /* Espacio desde el margen inferior */
+    right: 0px;    /* 10px desde el margen derecho del contenedor */
+    bottom: 10px;
+}
+
+.restaurant-photo img {
+    border-radius: 2px;
+    justify-content: right;
+    max-height: 250px;
+    padding-right: 20px;       /* Margen derecho */
+    padding-top: 50px;     /* Margen superior */
+    position: relative;
+    right: 0px;
+}
+
+
+.soluciones-ruido {
+    background-color: var(--beige-lino-light);
+    margin: 30px 0;
+}
+
+.soluciones-ruido h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.soluciones-ruido p {
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+.noise-problems {
+    margin-top: 10px;
+}
+
+.problem {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px dashed #ccc; */
+}
+
+.problem h4 {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-indent: 0px;    /* Sangría francesa */
+}
+
+.problem ul {
+    margin-left: 35px;
+    padding-left: 20px;
+}
+
+.problem li {
+    margin-bottom: 2px;
+}
+
+.problem p {
+    margin-bottom: 2px;
+    margin-left: 20px;
+    padding-left: 20px;
+    text-indent: -8px;    /* Sangría francesa */
+}
+
+.arquitectura-salud {
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.health-section {
+    overflow: visible;
+}
+
+.health-text p,
+.acoustic-section p,
+.swedishinspiration-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.health-text strong,
+.acoustic-section strong,
+.swedishinspiration-section strong {
+    color: var(--dark-blue);
+}
+
+.health-text a {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+.health-text a:hover {
+    color: var(--text-light);
+}
+
+/* ======================================================== LANGUAGE PAGES STYLES === */
+.deutsch-content,
+.swedish-content,
+.english-content {
+    padding-bottom: 40px;
+}
+
+.spanish-flag,
+.deutsch-flag,
+.swedish-flag,
+.english-flag {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.spanish-flag img,
+.deutsch-flag img,
+.swedish-flag img,
+.english-flag img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.spanish-flag h2,
+.deutsch-flag h2,
+.swedish-flag h2,
+.english-flag h2 {
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.about-section,
+.services-section,
+.resources-section {
+    margin: 30px 0;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 5px;
+}
+.guide-sve1,
+.service-category {
+    margin-bottom: 25px;
+}
+
+.service-category h4 {
+    border-bottom: 1.5px solid var(--dark-blue);
+    color: var(--dark-blue);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    /* margin-top: 10px; */
+    /* padding-bottom: 0px; */
+}
+
+.service-category h5 {
+    color: var(--dark-blue);
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.service-category ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.service-category li {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 8px;
+    padding-left: 10px;
+}
+
+.service-category p {
+    font-size: 15px;
+    font-weight: 100;
+    margin-bottom: 8px;
+}
+
+.resources-section ul {
+    padding-left: 20px;
+}
+
+.resources-section li {
+    margin-bottom: 10px;
+}
+
+.experience {
+    margin: 30px 0;
+}
+
+.experience p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.guia-sve1 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #2d3e50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-sve1 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve1 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve1 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve1 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve1 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-sve1 a:hover {
+    text-decoration: underline;
+}
+
+.guia-sve2 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #2d3e50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-sve2 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve2 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve2 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve2 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve2 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-sve2 a:hover {
+    text-decoration: underline;
+}
+
+.guia-sve3 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #2d3e50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-sve3 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve3 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve3 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve3 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-sve3 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-sve3 a:hover {
+    text-decoration: underline;
+}
+
+.guia-eng1 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #114232;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-eng1 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng1 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng1 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng1 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng1 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-eng1 a:hover {
+    text-decoration: underline;
+}
+
+.guia-eng2 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #114232;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-eng2 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng2 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng2 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng2 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng2 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-eng2 a:hover {
+    text-decoration: underline;
+}
+
+.guia-eng3 {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #114232;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.guia-eng3 h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng3 h6 {
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng3 p {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng3 ul {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    font-size: 15px;
+    color: var(--white);
+    text-align: left;
+}
+
+.guia-eng3 a {
+    font-weight: 700;
+    color: var(--white);
+    word-break: break-all;
+}
+
+.guia-eng3 a:hover {
+    text-decoration: underline;
+}
+
+.cta-presupuesto {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cta-presupuesto h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.cta-presupuesto h4 {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.cta-presupuesto a {
+    font-weight: 700;
+    color: var(--dark-blue);
+    word-break: break-all;
+}
+
+.cta-presupuesto a:hover {
+    text-decoration: underline;
+}
+
+.media-links {
+    margin: 40px 0 20px;
+    padding: 20px;
+    background-color: var(--beige-lino-ultralight);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.media-links h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.media-links h4 {
+    color: var(--dark-blue);
+    font-size: 16px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.media-links a {
+    font-weight: 700;
+    color: var(--dark-blue);
+    word-break: break-all;
+}
+
+.media-links a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================== REFERENCES PAGE STYLES === */
+.referencias {
+    padding-bottom: 20px;
+}
+
+.contact-info {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px 0;
+    margin-bottom: 0px 0;
+}
+
+.legal-links a {
+    margin: 0 10px 10px;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.legal-links a:hover {
+    color: var(--dark-blue);
+}
+
+.references-columns {
+    display: flex;
+    margin: 30px 0;
+    gap: 30px;
+}
+
+.reference-column {
+    flex: 1;
+}
+
+.reference-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+.reference-column h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    color: var(--dark-blue);
+}
+
+.reference-category {
+    margin-bottom: 25px;
+}
+
+.reference-category h5 {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: var(--dark-blue);
+    border-bottom: 1px solid var(--dark-blue);
+    display: inline-block; /* Opcional: ajusta el ancho al texto */
+}
+
+.reference-category ul {
+    padding-left: 15px;
+}
+
+.reference-category li {
+    margin-bottom: 2px;
+    font-size: 15px;
+    position: relative;
+    list-style-type: none;
+}
+
+.reference-category li:before {
+    /* content: '•'; */
+    /* position: absolute; */
+    /* left: -15px; */
+    /* color: var(--dark-blue); */
+} 
+
+.other-works {
+    margin: 40px 0;
+}
+
+.other-works h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+    border-bottom: 1.5px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+
+.other-works-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.other-works-list li {
+    flex: 0 0 50%;
+    margin-bottom: 2px;
+    padding-right: 15px;
+    font-size: 15px;
+    position: relative;
+    padding-left: 15px;
+    list-style-type: none;
+}
+
+.other-works-list li:before {
+    /* content: '•'; */
+    /* position: absolute; */
+    /* left: 0; */
+    /* color: var(--dark-blue); */
+}
+
+/* ===================================================================== FOOTER === */
+
+.footer-menu {
+    margin: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer-menu li {
+    margin: 0 10px 10px;
+}
+
+.footer-menu a {
+    font-size: 15px;
+    color: var(--dark-blue);
+}
+
+.footer-menu a:hover {
+    color: var(--text-light);
+}
+
+/* ===================================================== FOOTER-CONTACT === */
+
+.footer-contact {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.footer-contact p {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.footer-contact a {
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer-contact a:hover {
+    color: var(--accent-yellow);
+}
+
+/* ===================================================== SITE-FOOTER === */
+
+.site-footer {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 20px 0;
+    position: relative; /* Ocupa el flujo normal */
+}
+
+/* ===================================================== FOOTER-NAV === */
+
+.footer-nav {
+    /* background-color: var(--dark-blue); */
+    /* padding-top: 2px; */
+    /* padding-bottom: 10px; */
+    /* padding-left: 0px; */
+    /* padding-right: 0px; */
+    /* width: 100%; */
+    /* border-top: 1px solid rgba(255, 255, 255, 0.1); */
+    /* Estilos para desktop */
+    /* display: block; /* Asegura que se muestre en desktop */
+    /* position: relative; /* Ocupa el flujo normal */
+    /* z-index: 998; /* Por debajo del header, pero por encima del contenido */
+}
+
+.footer-nav .container {
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
+    /* padding: 0 15px; */
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.footer-nav li {
+    margin: 0 15px 10px;
+}
+
+.footer-nav a {
+    color: #fff;
+    font-size: 13px;
+    position: relative; /* Añade esto */
+    padding: 5px 0; /* Añade padding para espacio */
+    display: inline-block; /* Mejor control del subrayado */
+}
+
+.footer-nav a span {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-left: 5px;
+}
+
+.footer-nav a:hover,
+.footer-nav li.active a {
+    color: var(--accent-yellow);
+}
+
+.footer-nav li.active a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-yellow);
+}
+
+/* ===================================================== ASSOCIATIONS === */
+.associations {
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    margin: 0px 0;
+    padding: 10px;
+}
+
+.associations > p {
+    font-weight: 600;
+    margin-bottom: 15px;
+    /* text-align: center; */
+}
+
+.associations h3 {
+    font-size: 12px;
+    font-weight: 200;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.members {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.logomember {
+    flex: 1;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logomember:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logomember a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.logomember a:hover {
+    color: inherit;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.logomember img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.logomember h4 {
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: var(--amarillo-azufre);
+}
+
+.logomember p {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+
+/* ===================================================== COPYRIGHT === */
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* =============================================================== MEDIA QUERIES === */
+/* ================================================================================= */
+
+/* Tablet styles (Desktop intermedio) */
+@media (max-width: 992px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .content-area {
+        padding: 30px 20px;
+    }
+
+    .service-columns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .references-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .other-works-list li {
+        flex: 0 0 100%;
+    }
+
+    .team-info {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 5px;
+    }
+    
+    .team-photo {
+        margin: 5px 5px 10px 5px;
+        order: -1;
+        align-self: flex-end;
+    }
+    
+    .team-text {
+        margin-bottom: 5px;
+        padding: 5px;
+    }
+
+    .problem p {
+    font-size: 14px;
+    margin-bottom: 2px;
+    margin-left: 15px;
+    padding-left: 20px;
+    text-indent: -10px;    /* Sangría francesa */
+    }
+
+    /* Ajustes específicos para que el menú horizontal funcione bien en tablets */
+    .main-nav ul {
+        justify-content: center; /* Centra los elementos de navegación */
+        margin-left: 0; /* Elimina el margen del logo */
+    }
+
+    .main-nav li {
+        margin-right: 20px; /* Reduce un poco el espacio entre elementos */
+    }
+
+    .main-nav a {
+        font-size: 13px; /* Ajusta el tamaño de la fuente si es necesario */
+    }
+}
+
+/* =================================================================================\
+ * ESTILOS MÓVILES (hasta 768px)
+ * ================================================================================*/
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    /* === HEADER MÓVIL === */
+    .site-header .container {
+        justify-content: space-between; /* Logo a la izquierda, hamburguesa y banderas a la derecha */
+        padding: 0 15px;
+        flex-direction: row; /* Vuelve a flex-direction row para que logo y derecha estén en fila */
+        align-items: center; /* Centra verticalmente */
+        height: auto; /* Permite que la altura se ajuste */
+    }
+
+    .logo {
+        width: auto; /* El logo toma el ancho que necesita */
+        padding: 10px 0; /* Reduce el padding */
+        border-right: none;
+        flex-shrink: 1; /* Permite que el logo se encoja si es necesario */
+    }
+
+    .logo-img {
+        max-height: 50px; /* Reduce el tamaño del logo */
+        margin-bottom: 0; /* Elimina margen inferior */
+    }
+
+    .logo .tagline {
+        display: none; /* Oculta el tagline en móviles */
+    }
+
+    .header-right {
+        padding: 10px 0;
+        margin-right: 0;
+        justify-content: flex-end; /* Alinea elementos a la derecha dentro de header-right */
+        flex-shrink: 1; /* Permite que se encoja */
+    }
+
+    .language-selector {
+        display: none; /* Oculta las banderas en la cabecera en móviles */
+    }
+
+    /* === MOSTRAR MENÚ HAMBURGUESA EN MÓVIL === */
+    .menu-toggle {
+        display: flex; /* Muestra el icono de la hamburguesa */
+        margin-left: 15px; /* Espacio entre el selector de idioma (si estuviera) y la hamburguesa */
+        z-index: 1002; /* Asegura que la hamburguesa esté por encima del menú */
+    }
+
+    /* ============================================ NAVEGACIÓN MÓVIL (DESLIZANTE) === */
+    .main-nav {
+        position: fixed; /* Fijo en la pantalla */
+        top: 0; /* Desde la parte superior */
+        right: -100%; /* Inicialmente fuera de la pantalla a la derecha */
+        width: 100%; /* Ocupa todo el ancho */
+        height: 100vh; /* Ocupa toda la altura de la ventana */
+        background-color: var(--dark-blue);
+        transition: right 0.3s ease-in-out; /* Transición suave para el deslizamiento */
+        z-index: 1000; /* Por debajo de la hamburguesa, pero por encima del contenido */
+        overflow-y: auto; /* Permite scroll si hay muchos elementos */
+        padding-top: 80px; /* Espacio para que el menú no quede debajo del header */
+        display: flex; /* Para centrar el contenido verticalmente si es necesario */
+        align-items: center; /* Centra los elementos verticalmente */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        border-top: none; /* Elimina el borde superior que tenía en desktop */
+    }
+
+    .main-nav.active {
+        right: 0; /* Mueve el menú a la pantalla */
+    }
+
+    .main-nav .container {
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        margin-left: 0; /* Elimina el margen izquierdo para el menú móvil */
+        width: 100%;
+        text-align: center; /* Centra el texto de los enlaces */
+    }
+
+    .main-nav li {
+        margin: 0 0 20px 0; /* Espacio entre los elementos del menú */
+        width: 100%;
+    }
+
+    .main-nav a {
+        font-size: 18px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+        padding: 10px 0;
+    }
+
+    /* Línea activa en móvil - se puede quitar o redefinir si no se necesita */
+    .main-nav li.active a:after {
+        display: none; /* Oculta la línea activa en móvil si no quieres */
+    }
+    
+    .main-nav li.active a {
+        color: var(--accent-yellow); /* Color de texto para el activo */
+    }
+
+    /* ================================================== LAYOUT PRINCIPAL MÓVIL === */
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        /* Oculta completamente la sidebar en móviles para optimizar espacio */
+        display: none; 
+    }
+
+    .content-area {
+        padding: 20px; /* Reduce el padding del área de contenido para móviles */
+    }
+
+    /* === TÍTULOS MÓVILES === */
+    .inicio h2,
+    .servicios h2,
+    .referencias h2,
+    .deutsch-content h2,
+    .swedish-content h2,
+    .english-content h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .sobre-nosotros h3,
+    .health-text h3,
+    .acoustic-section h3,
+    .swedishinspiration h3,
+    .valor-proyecto h3,
+    .metodo-trabajo h3,
+    .sostenibilidad h3,
+    .lista-servicios h3,
+    .other-works h3,
+    .reference-column h3,
+    .deutsch-content h3,
+    .swedish-content h3,
+    .english-content h3 {
+        font-size: 16px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .acustica-expertise h4,
+    .media-buttons h4,
+    .valor-proyecto h4,
+    .problem h4 {
+        color: var(--dark-blue);
+        font-size: 14px;
+        font-weight: 400;
+        margin: 5px 15px 5px;
+        padding-bottom: 2px;
+        padding-left: 10px;
+        text-indent: -15px;    /* Sangría francesa */
+    }
+
+    .intro-text p,
+    .valor-proyecto p,
+    .metodo-trabajo p,
+    .sostenibilidad p,
+    .acustica-servicios p,
+    .deutsch-content p,
+    .swedish-content p,
+    .english-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .problem ul {
+    padding-left: 0px;
+    margin-left: 0px;
+    }
+
+    .problem p {
+    font-size: 14px;
+    margin-bottom: 2px;
+    margin-left: 10px;
+    padding-left: 20px;
+    text-indent: -8px;    /* Sangría francesa */
+}
+
+    /* ================================ SECCIONES CON COLUMNAS APILADAS EN MÓVIL === */
+    .service-columns {
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .team-info {
+        min-height: auto;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    
+    .team-photo {
+        order: 1;
+        margin: 5px;
+        align-self: center;
+    }
+    
+    .team-text {
+        text-align: left;
+        padding-right: 5px;
+    }
+    
+    .team-text p {
+        font-size: 8px;
+    }
+    
+    .team-text p.bold {
+        font-size: 11px;
+    }
+    
+    .team-text p.texto-derecha {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    
+    .team-photo img {
+        max-height: 80px;
+    }
+
+    .lista-servicios h4 {
+        color: var(--dark-blue);
+        font-size: 16px;
+        font-weight: 100;
+        margin-left: 15px;
+        margin-bottom: 5px;
+        text-indent: -25px;    /* Sangría francesa */
+    }
+
+    .lista-servicios li {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 18px;
+        margin-bottom: 5px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        position: relative;
+    }
+
+    .lista-servicios p {
+        font-size: 14px;
+        font-weight: 100;
+        margin-bottom: 8px;
+        margin-left: 25px;
+        padding-left: 0px;
+    }
+
+    .lista-servicios ul {
+        font-size: 14px;
+        font-weight: 100;
+        list-style: none;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+
+    .acustica-expertise p {
+        display:contents;
+        /* flex: 2; */
+        flex-direction: column-reverse; /* Texto anclado abajo */
+        /* flex-grow: 1; /* Ocupa el espacio restante */
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-right: 40px;
+        /* margin-top: 160px; */
+        /* overflow: auto; /* Scroll si el texto desborda */
+        position: relative;
+        text-align:justify;
+    }
+
+    .media-buttons p {
+        display:contents;
+        /* flex: 2; */
+        flex-direction: column-reverse; /* Texto anclado abajo */
+        /* flex-grow: 1; /* Ocupa el espacio restante */
+        font-size: 15px;
+        margin-bottom: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-right: 40px;
+        /* margin-top: 160px; */
+        /* overflow: auto; /* Scroll si el texto desborda */
+        position: relative;
+        text-align:justify;
+    }
+
+    .restaurant-photo {
+        display: none;
+    }
+
+    .language-options {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .lang-option a {
+        padding: 15px;
+    }
+
+    .guia-sve1 {
+        padding: 15px;
+    }
+
+    .guia-sve1 h3 {
+        font-size: 18px;
+    }
+
+    .guia-sve2 {
+        padding: 15px;
+    }
+
+    .guia-sve2 h3 {
+        font-size: 18px;
+    }
+
+    .guia-sve3 {
+        padding: 15px;
+    }
+
+    .guia-sve3 h3 {
+        font-size: 18px;
+    }
+
+    .cta-presupuesto {
+        padding: 15px;
+    }
+
+    .cta-presupuesto h3 {
+        font-size: 18px;
+    }
+
+    .media-links {
+        padding: 15px;
+    }
+
+    .media-links h3 {
+        font-size: 18px;
+    }
+
+    /* ==============================================================Footer ajustes */
+    .site-footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .footer-nav li {
+        margin: 0 0 10px 0;
+    }
+
+    .contact-info {
+        margin-bottom: 15px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+    }
+
+    .legal-links a {
+        margin-bottom: 8px;
+    }
+
+    /* Specific adjustments for projesp.html sidebar on mobile */
+    .referencias-page .sidebar {
+        display: none !important; /* Asegura que la sidebar de referencias se oculta */
+    }
+}
+
+/* ===================================================================================\
+ * MÓVILES PEQUEÑOS (hasta 480px)
+ * ==================================================================================*/
+@media (max-width: 480px) {
+    .logo-img {
+        max-height: 45px; /* Reduce el tamaño del logo aún más en pantallas muy pequeñas */
+    }
+
+    .main-nav a {
+        font-size: 16px; /* Ajusta el tamaño de fuente para pantallas muy pequeñas */
+    }
+
+    .content-area {
+        padding: 15px; /* Más reducción de padding */
+    }
+
+    .team-info {
+        flex-direction: column;
+    }
+    
+    .team-photo {
+        order: -1;
+        align-self: flex-end;
+        margin-bottom: 5px;
+    }
+    
+    .team-text {
+        text-align: right;
+    }
+
+    .soluciones-ruido h3 {
+        margin-left: 0px;
+    }
+
+    .problem h4 {
+        font-size: 12px;
+        margin-left: 0px;
+    }
+
+}

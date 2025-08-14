@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LJUDTOPIA - Arkitektur · Välbefinnande · Hälsa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section Modificado -->
+    <header class="site-header">
+        <div class="container">
+            <!-- Logo Section - Mismo ancho que sidebar -->
+            <div class="logo">
+                <a href="homeesp.html">
+                    <img src="img/Logo.jpeg" alt="LJUDTOPIA Logo" class="logo-img">
+                    <p class="tagline">ARKITEKTUR · VÄLBEFINNANDE · HÄLSA</p>
+                </a>
+            </div>
+            
+            <!-- Header Right Section -->
+            <div class="header-right">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <a href="interesp.html"><img src="img/flag-spain.png" alt="Español"></a>
+                    <a href="intersve.html" class="active"><img src="img/flag-sweden.png" alt="Svenska"></a>
+                    <a href="intereng.html"><img src="img/flag-uk.png" alt="English"></a>
+                    <a href="interdeu.html"><img src="img/flag-germany.png" alt="Deutsch"></a>
+                </div>
+
+                <!-- Language Selector (Mobile Dropdown) -->
+                <div class="lang-mobile" aria-label="Selector de idioma en móvil">
+                    <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
+                        <img class="lang-current-flag" src="img/flag-spain.png" alt="Idioma actual">
+                        <span class="lang-toggle-label">Idioma</span>
+                        <span class="visually-hidden">Cambiar idioma</span>
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                    </button>
+                    <ul class="lang-menu" role="listbox" aria-label="Selecciona idioma">
+                        <li role="option" aria-selected="true">
+                            <a href="interesp.html" data-lang="es">
+                                <img src="img/flag-spain.png" alt="">
+                                <span>Español</span>
+                            </a>
+                        </li>
+                        <li role="option">
+                            <a href="intersve.html" data-lang="sv">
+                                <img src="img/flag-sweden.png" alt="">
+                                <span>Svenska</span>
+                            </a>
+                        </li>
+                        <li role="option">
+                            <a href="intereng.html" data-lang="en">
+                                <img src="img/flag-uk.png" alt="">
+                                <span>English</span>
+                            </a>
+                        </li>
+                        <li role="option">
+                            <a href="interdeu.html" data-lang="de">
+                                <img src="img/flag-germany.png" alt="">
+                                <span>Deutsch</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="homesve.html">Hem</a></li>
+                <li><a href="archsve.html">Arkitektur</a></li>
+                <li><a href="wellsve.html">Välbefinnande</a></li>
+                <li class="active"><a href="intersve.html">Internationell</a></li>
+                <li><a href="projsve.html">Projekt</a></li>
+                <li><a href="mediasve.html">Media</a></li>
+                <li><a href="contactsve.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="sidebar">
+            <!-- Sidebar images -->
+            <div class="sidebar-image">
+                <img src="img/sidebar-tjanster.jpg" alt="Arkitektoniskt projekt">
+            </div>
+        </div>
+        
+        <div class="content-area">
+            <section class="swedish-content">
+                <div class="swedish-flag">
+                    <img src="img/flag-sweden.png" alt="Svenska">
+                    <h2>TJÄNSTER FÖR SVENSKA INVÅNARE I SPANIEN</h2>
+                </div>
+                
+                <!-- About section -->
+                <div class="about-section">
+                    <h3>OM OSS</h3>
+                    <p>Vi är en spansk-svensk arkitektbyrå som har engagerat arkitektprojekt inom både nybyggnation och renovering, specialiserat på byggnadskonstruktion och byggakustik, som arbetar enligt de högsta internationella kvalitetsstandarderna för att förbättra människors levnadsförhållanden.</p>
+                    <p>Vi hjälper dig med ditt spanska hem: projekt, bygglov, ljudproblem och juridisk rådgivning – allt på svenska.</p>
+                    <p>Vår arkitekt är expert på spanska nationella och regionala byggregler. Vi förstår både era behov och den lokala byråkratin.</p>
+                    <p>Kontakta oss gärna idag för en kostnadsfri konsultation.</p>
+                </div>
+                
+                <!-- Services section -->
+                <div class="services-section">
+                    <h3>TJÄNSTER</h3>
+                    <div class="service-category">
+                        <h4>Arkitektur & Konstruktion</h4>
+                        <h5>Skräddarsydda husprojekt och renovering för svenska ägare</h5>
+                        <h5>Bygglov och legalisering av fastigheter</h5>
+                        <ul>
+                        <li>Förvärvsrådgivning: Undvik dyra misstag vid köp.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h4>Akustik & Ljudisolering</h4>
+                        <h5>Mätning och lösningar mot buller från grannar eller gator</h5>
+                        <h5>Juridisk hjälp vid konflikter om buller</h5>
+                        <h5>Ljudisolering för hem, studio eller lokal</h5>
+                    </div>
+                    
+                    <div class="service-category">
+                        <h4>För Svenskar i Spanien</h4>
+                        <h5>Vi talar svenska. Inga kommunikations problem</h5>
+                        <ul>
+                        <li>Tolkning och översättning av tekniska dokument.</li>
+                        </ul>
+                        <h5>Samverkan med lokala myndigheter och entreprenörer</h5>
+                        <h5>Underhåll av hus när du är utomlands</h5>
+                    </div>
+                </div>
+                
+                <!-- Resources section -->
+                <div class="resources-section">
+                    <h3>RESURSER / GUIDER</h3>
+                    <ul>
+                        <li>Här hittar du användbar information för att starta ditt projekt i Spanien:</li>
+                    </ul>
+                </div>
+
+                <!-- Guia-Sve1 -->
+                <div class="guia-sve1">
+                    <h3>GUIDE 1</h3>
+                    <h3>Köpa, renovera eller bygga i Spanien</h3>
+                    <p>Att investera i fastigheter i Spanien kan vara en lönsam och inspirerande process, men kräver god lokal kunskap och professionell vägledning. Vår svensk-spanska arkitektbyrå erbjuder komplett stöd genom hela processen.</p>
+                    <h6>1. Köpa</h6>
+                    <p>Vi hjälper dig att utvärdera fastigheter ur ett tekniskt och rättsligt perspektiv innan köp. Vi gör byggnadstekniska inspektioner och ger råd kring stadsplanering, akustik och energieffektivitet.</p>
+                    <h6>2. Renovera</h6>
+                    <p>Vid renovering tar vi fram projekt med fokus på funktion, estetik och lagkrav. Vi ansvarar för tillstånd, budget, tidsplan samt samordning med byggföretag.</p>
+                    <h6>3. Bygga nytt</h6>
+                    <p>Vi erbjuder nybyggnadsprojekt från första skiss till slutbesiktning, inklusive stommedesign, hållbarhetsanalys och uppföljning på plats.</p>
+                    <h6>Viktig att veta</h6>
+                    <ul>
+                        <li>- Spansk byråkrati kräver lokal expertis</li>
+                        <li>- Tillstånd och licenser varierar per kommun <em>(comunidad autónoma)</em></li>
+                        <li>- God kommunikation mellan arkitekt, kund och entreprenör är avgörande</li>
+                        <li>- Vi talar svenska, engelska och spanska</li>
+                    <ul>
+                    <p></p>
+                    <p>Vårt mål är att göra processen trygg, transparent och effektiv – oavsett om du köper ett semesterhus, utvecklar en investering eller bygger din drömbostad.</p>
+                </div>
+
+                <!-- Guia-Sve2 -->
+                <div class="guia-sve2">
+                    <h3>GUIDE 2</h3>
+                    <h3>Tillstånd och bygglicenser i Spanien</h3>
+                    <p>I Spanien krävs olika typer av tillstånd för byggnation, renovering eller ändrad användning av fastigheter. Vår svensk-spanska arkitektbyrå vägleder dig genom hela processen.</p>
+                    <h6>1. Planeringsstatus <em>(Planeamiento)</em></h6>
+                    <p>Varje tomt eller fastighet omfattas av en detaljplan (plan general eller liknande), som definierar vad som får byggas, hur mycket, och med vilka begränsningar. Vi analyserar denna åt dig i ett tidigt skede.</p>
+                    <h6>2. Mindre Tillstånd <em>(Licencia de obra menor)</em></h6>
+                    <p>gäller för enklare arbeten, t.ex. Badrumsrenovering eller målning. Ofta krävs endast anmälan till kommunen.</p>
+                    <h6>3. Större Tillstånd <em>(Licencia de obra mayor)</em></h6>
+                    <p>Krävs vid strukturförändringar, tillbyggnader, nybyggnation eller ändrad användning. Detta tillstånd kräver ett arkitektprojekt, teknisk dokumentation och godkännande av kommunen.</p>
+                    <h6>4. Andra nödvändiga dokument</h6>
+                    <ul>
+                        <li>- Planeringsintyg <em>(Certificado urbanístico)</em></li>
+                        <li>- Tekniskt utlåtande <em>(Informe técnico)</em></li>
+                        <li>- Inflyttningstillstånd <em>(Licencia de primera ocupación)</em></li>
+                        <li>- Energicertifikat, akustikintyg, osv.</li>
+                    <ul>
+                    <h6>5. Tidsram och ansvar</h6>
+                    <p>Tillståndsprocessen varierar från kommun till kommun och kan ta från några veckor till flera månader. Vi hanterar ansökningar, kontakt med tekniska kontor och följer processen åt dig.</p>
+                    <h6>Slutsats</h6>
+                    <p>Spansk byråkrati är komplex – men med rätt rådgivning blir processen smidig. Vi erbjuder en helhetslösning med fokus på säkerhet, tydlighet och professionellt ansvar.</p>
+                </div>
+
+                <!-- Guia-Sve3 -->
+                <div class="guia-sve3">
+                    <h3>GUIDE 3</h3>
+                    <h3>Ljudisolering av bostäder och lokaler i Spanien</h3>
+                    <p>I Spanien är ljudisolering ett växande krav, särskilt i tätbebyggda områden och för kommersiella lokaler. Vi erbjuder teknisk rådgivning och nyckelfärdiga lösningar för att uppnå komfort och uppfylla lagkrav.</p>
+                    <h6>1. Juridiska krav</h6>
+                    <p>Bostäder måste följa <em>CTE DB-HR</em> (spanska byggregler för bullerskydd). Lokaler med offentlig verksamhet (restauranger, barer, gym, etc.). Kräver dessutom ett akustiskt certifikat <em>(certificado acústico)</em> för att få verksamhetstillstånd.</p>
+                    <h6>2. Nödvändiga Tillstånd</h6>
+                    <ul>
+                        <li>- För mindre bostadsprojekt räcker ofta en mindre tillstånd <em>(Licencia de obra menor)</em></li>
+                        <li>- För lokaler krävs större tillstånd <em>(Licencia de obra mayor)</em> samt kommunens tillstånd för verksamheten</li>
+                    <ul>
+                    <p>Vi hanterar hela processen, inklusive teknisk dokumentation, ljudmätningar och projektledning.</p>
+                    <h6>3. Typiska lösningar</h6>
+                    <ul>
+                        <li>- För väggar: avkopplade gipssystem, akustikpaneler, mineralull</li>
+                        <li>- För tak: flytande taksystem, akustiska undertak</li>
+                        <li>- För golv: stegljudsdämpande skikt och flytande golv</li>
+                        <li>- För installationer: inkapsling av fläktar, rör och luftkanaler</li>
+                    <ul>
+                    <h6>4. Ungefärliga kostnader</h6>
+                    <ul>
+                        <li>- Bostad: 80–120 €/m²</li>
+                        <li>- Lokaler: 150–250 €/m² (beroende på ljudnivåkrav och användning)</li>
+                    <ul>
+                    <p>Vi erbjuder kostnadsförslag efter första besök och analys.</p>
+                    <h6>5. Slutgiltig leverans</h6>
+                    <p>Vi utför mätningar, rapporter och slutintyg (inklusive akustiskts certifikat <em>(certificado acústico)</em> vid behov).</p>
+                    <h6>Slutsats</h6>
+                    <p>Ljudkomfort är en investering i hälsa, trivsel och juridisk trygghet. Vi erbjuder fullständig rådgivning och lösning på tre språk: svenska, engelska och spanska.</p>
+                </div>
+                
+                <!-- Contact CTA -->
+                <div class="cta-presupuesto">
+                    <h3>KONTAKTFORMULÄR</h3>
+                    <h4>(Beskriv ditt projekt eller ditt bullerproblem)</h4>
+                    <p>Berätta oss, vad vill ni ha hjälp med? (Byggnad/renovering, Byggnadsakustik, Juridisk rådgivning, andra)</p>
+                    <p>Skicka förfrågan till <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a> – vi svarar inom 24 timmar.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="homesve.html">Hem</a></li>
+                    <li><a href="archsve.html">Arkitektur</a></li>
+                    <li><a href="wellsve.html">Välbefinnande</a></li>
+                    <li class="active"><a href="intersve.html">Internationell</a></li>
+                    <li><a href="projsve.html">Projekt</a></li>
+                    <li><a href="mediasve.html">Media</a></li>
+                    <li><a href="contactsve.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <ul>
+                    <p><a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a></p>
+                </ul>
+                <p>🔊(+34) 667.817.991</p>
+            </div>
+                <div class="legal-links">
+                    <a href="#">Juridisk information</a>
+                    <a href="#">Integritetspolicy</a>
+                </div>
+
+            <!-- Associations logos / sellos section -->
+            <div class="associations">
+                <h3>Medlem i:</h3>
+                <p></p>
+                <div class="members">
+                    <div class="logomember coam-logo">
+                        <a href="https://coam.org">
+                            <img src="img/coam-logo.jpg" alt="Miembro del COAM" title="Miembro del Colegio Oficial de Arquitectos de Madrid">
+                            <h4></h4>
+                            <p></p>
+                        </a>
+                    </div>
+                    <div class="logomember cscae-logo">
+                        <a href="https://www.cscae.com">
+                            <img src="img/cscae-logo.png" alt="Miembro del CSCAE" title="Miembro del Consejo Superior de Colegios de Arquitectos de España">
+                            <h4></h4>
+                            <p></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Santiago López Rodríguez. Alla rättigheter förbehållna.</p>
+                <p>Ljudtopia™ är ett varumärke under registrering.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

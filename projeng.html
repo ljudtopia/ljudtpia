@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Proyectos - LJUDTOPIA - Arquitectura · Bienestar · Salud</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="referencias-page">
+<!-- Header Section Modificado -->
+<header class="site-header">
+<div class="container">
+<!-- Logo Section - Mismo ancho que sidebar -->
+<div class="logo">
+<a href="homeesp.html">
+<img alt="LJUDTOPIA Logo" class="logo-img" src="img/Logo.jpeg"/>
+<p class="tagline">ARCHITECTURE · WELLBEING · HEALTH</p>
+</a>
+</div>
+<!-- Header Right Section -->
+<div class="header-right">
+<!-- Language Selector -->
+<div class="language-selector">
+<a href="projesp.html"><img alt="Español" src="img/flag-spain.png"/></a>
+<a href="projsve.html"><img alt="Svenska" src="img/flag-sweden.png"/></a>
+<a class="active" href="projeng.html"><img alt="English" src="img/flag-uk.png"/></a>
+<a href="projdeu.html"><img alt="Deutsch" src="img/flag-germany.png"/></a>
+</div>
+<!-- Language Selector (Mobile Dropdown) -->
+<div aria-label="Selector de idioma en móvil" class="lang-mobile">
+<button aria-expanded="false" aria-haspopup="listbox" class="lang-toggle">
+<img alt="Idioma actual" class="lang-current-flag" src="img/flag-spain.png"/>
+<span class="lang-toggle-label">Idioma</span>
+<span class="visually-hidden">Cambiar idioma</span>
+<svg aria-hidden="true" class="chevron" height="16" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+</button>
+<ul aria-label="Selecciona idioma" class="lang-menu" role="listbox">
+<li aria-selected="true" role="option">
+<a data-lang="es" href="projesp.html">
+<img alt="" src="img/flag-spain.png"/>
+<span>Español</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="sv" href="projsve.html">
+<img alt="" src="img/flag-sweden.png"/>
+<span>Svenska</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="en" href="projeng.html">
+<img alt="" src="img/flag-uk.png"/>
+<span>English</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="de" href="projdeu.html">
+<img alt="" src="img/flag-germany.png"/>
+<span>Deutsch</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Mobile Menu Toggle -->
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+</header>
+<!-- Navigation Menu -->
+<nav class="main-nav">
+<div class="container">
+<ul>
+<li><a href="homeeng.html">Home</a></li>
+<li><a href="archeng.html">Architecture</a></li>
+<li><a href="welleng.html">Wellbeing</a></li>
+<li><a href="intereng.html">International</a></li>
+<li class="active"><a href="projeng.html">Projects</a></li>
+<li><a href="mediaeng.html">Media</a></li>
+<li><a href="contacteng.html">Contact</a></li>
+</ul>
+</div>
+</nav>
+<!-- Main Content -->
+<main>
+<div class="sidebar">
+<!-- <h3>Proyectos Destacados</h3> -->
+<div class="image-carousel">
+<div class="carousel-container">
+<!-- Las imágenes se insertarán dinámicamente con JavaScript -->
+</div>
+</div>
+</div>
+<style>
+            .image-carousel {
+                width: 100%;
+                overflow: hidden;
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            
+            .carousel-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            
+            .carousel-container img {
+                width: 100%;
+                height: auto;
+                flex-shrink: 0;
+                object-fit: contain;
+            }
+        </style>
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Array con los nombres de las imágenes (ajusta según tus archivos)
+                const images = [
+                    'project-001.jpg',
+                    'project-002.jpg',
+                    'project-003.jpg',
+                    'project-004.jpg',
+                    'project-005.jpg',
+                    'project-006.jpg',
+                    'project-007.jpg',
+                    'project-008.jpg',
+                    'project-009.jpg',
+                    'project-010.jpg',
+                    'project-011.jpg',
+                    'project-012.jpg',
+                    'project-013.jpg',
+                    'project-014.jpg',
+                    'project-015.jpg',
+                    'project-016.jpg',
+                    'project-017.jpg',
+                    'project-018.jpg',
+                    'project-019.jpg',
+                    'project-020.jpg',
+                    'project-021.jpg',
+                    'project-022.jpg'
+                    // Añade más imágenes según necesites
+                ];
+                
+                const carouselContainer = document.querySelector('.carousel-container');
+                const imgPath = 'img-projects/'; // Ruta a tu carpeta de imágenes
+                
+                // Crear elementos img y añadirlos al carrusel
+                images.forEach(img => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imgPath + img;
+                    imgElement.alt = "Imagen de proyecto";
+                    carouselContainer.appendChild(imgElement);
+                });
+                
+                // Configurar el carrusel
+                let currentIndex = 0;
+                const totalImages = images.length;
+                
+                function updateCarousel() {
+                    const offset = -currentIndex * 100;
+                    carouselContainer.style.transform = `translateX(${offset}%)`;
+                }
+                
+                // Cambiar de imagen cada segundo
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalImages;
+                    updateCarousel();
+                }, 2000);
+                
+                // Inicializar el carrusel
+                updateCarousel();
+            });
+        </script>
+<div class="content-area">
+<!-- References section -->
+<section class="referencias">
+<h2>PROJECT PORTFOLIO</h2>
+<p>Selection of works and collaborations from our 300+ references (see also “Media”)</p>
+<div class="references-columns">
+<!-- Column 1: Architecture Projects -->
+<div class="reference-column">
+<h3>ARCHITECTURAL WORKS</h3>
+<div class="reference-category">
+    <h5>Building pathology</h5>
+    <ul>
+        <li>Residential building at Calle Baltanás (Madrid)</li>
+        <li>Residential building at Paseo de los Olivos (Madrid)</li>
+        <li>Residential building at Calle Rioja (Madrid)</li>
+        <li>Residential building at Calle Alfonso Gómez (Madrid)</li>
+        <li>Residential building at Calle Tracia (Madrid)</li>
+        <li>Residential building at Calle Humanes (Madrid)</li>
+        <li>Residential building at Avenida de los toreros (Madrid)</li>
+        <li>Residential building at Calle Fray Ceferino González (Madrid)</li>
+        <li>Residential building at Calle de la Madera (Madrid)</li>
+        <li>Residential building at Calle de la Palma (Madrid)</li>
+        <li>Single-family house in Urbanización Calypo-Fado (Toledo)</li>
+        <li>Garage and industrial building at Calle Baltanás (Madrid)</li>
+        <li>Commercial building terrace (Stockholm, Sweden)</li>
+        <li>Reinforced concrete walls. Lycée Moliere (Villanueva de la Cañada)</li>
+        <li>Retaining wall in Sigüenza (Guadalajara)</li>
+    </ul>
+</div>
+<h4>Basic and Execution Projects</h4>
+<div class="reference-category">
+<h5>Single-family homes</h5>
+<ul>
+<li>Single-family house in Albalate de Zorita (Guadalajara)</li>
+<li>Single-family house in Marugán (Segovia)</li>
+<li>Single-family house in Almorox (Toledo)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Structural rehabilitation</h5>
+<ul>
+<li>Reinforcement of wooden roof structure at Calle Fray Ceferino González (Madrid)</li>
+<li>Slab refurbishment at Calle de la Palma (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Change of use</h5>
+<ul>
+<li>Change of use from premises to dwelling at Plaza Bami (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Full refurbishment</h5>
+<ul>
+<li>Coffee and Pastry shop at Calle Ibiza (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Operating licence</h5>
+<ul>
+<li>Rehabilitation of rehearsal room at Calle Arquitectura (Madrid)</li>
+<li>Beauty centre at Calle Santiago Apóstol (Majadahonda)</li>
+</ul>
+</div>
+
+<div class="reference-category">
+<h5>Health and Safety Studies</h5>
+<ul>
+<li>Residential building at Calle Escudero (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Urban installations</h5>
+<ul>
+<li>Relocation of urban installations at Calle Encomienda de Palacios (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Accessibility. Stairlift platforms</h5>
+<ul>
+<li>Installation of stairlift platform at Calle Toledo (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Accessibility. External lifts in residential buildings</h5>
+<ul>
+<li>Lift at Calle General Palanca (Madrid)</li>
+<li>Lift at Calle Entrearroyos (Madrid)</li>
+<li>Lift at Calle Encomienda de Palacios (Madrid)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Urban planning. Competitions. Awards</h5>
+<ul>
+<li>First Prize Urban Planning Contest "Emilio Larrodera"</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Sustainability. Awards</h5>
+<ul>
+<li>First Place (*) Architectural Contest "Ciudades Sostenibles" ETSAM-MOPT</li>
+</ul>
+</div>
+</div>
+<!-- Column 2: Collaborations -->
+<div class="reference-column">
+<h3>COLLABORATIONS</h3>
+<div class="reference-category">
+<h5>Execution projects. Healthcare architecture</h5>
+<ul>
+<li>Hospital refurbishment and extension (Södertälje, Sweden)</li>
+<li>Hospital outpatient emergency unit (Huddinge, Sweden)</li>
+<li>Hospital adult emergency department (Huddinge, Sweden)</li>
+<li>Extension of hospital services building (Huddinge, Sweden)</li>
+<li>Refurbishment of hospital operating theatres (Solna, Sweden)</li>
+<li>Refurbishment of hospital corridors (Linköping, Sweden)</li>
+<li>Refurbishment of hospital genetic research facilities (Linköping, Sweden)</li>
+<li>Refurbishment of hospital staff areas and changing rooms (Linköping, Sweden)</li>
+<li>Hospital motion analysis laboratory (Linköping, Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Execution projects. Educational architecture</h5>
+<ul>
+<li>New university campus. Buildings "2 and 4" (Stockholm, Sweden)</li>
+<li>Special education school. (Vendelsö, Sweden)</li>
+<li>School refurbishment and extension in Kungsholmen (Stockholm, Sweden)</li>
+<li>Secondary school extension and refurbishment in Hägersten (Stockholm, Sweden)</li>
+<li>Basic project for primary school in Uppsala (Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Execution projects. Urban planning and landscape architecture</h5>
+<ul>
+<li>Skatepark (skating and skateboarding tracks). (Norrtälje, Sweden)</li>
+<li>Hospital access plaza and car parks (Södertälje, Sweden)</li>
+<li>Fencing of hospital administration building (Solna, Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Execution projects (others)</h5>
+<ul>
+<li>City library. Commercial premises (Basarerna, Stadsbibliotek) (Stockholm, Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Precast concrete structure</h5>
+<ul>
+<li>Office building and industrial warehouse for paper industry (Iggesund, Sweden)</li>
+<li>Residential building Övre Utkiken, (Tyresö, Sweden)</li>
+<li>Residential building Nedre Utkiken, (Tyresö, Sweden)</li>
+<li>Office building in Sveavägen (Stockholm, Sweden)</li>
+<li>Commercial building in Hörnstull (Stockholm, Sweden)</li>
+<li>Precast structure for mixed-use building, indoor commercial plaza and common areas in Danderyd (Sweden)</li>
+<li>Single-family homes in Gagnef (Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Construction management</h5>
+<ul>
+<li>Building with 62 dwellings in Leganés</li>
+<li>Building with 132 dwellings in Leganés</li>
+<li>Building with 174 dwellings in Las Tablas (Madrid)</li>
+<li>Building with 96 dwellings in Montecarmelo (Madrid)</li>
+<li>Building with 107 dwellings in Montecarmelo (Madrid)</li>
+<li>71 terraced houses in Alcalá de Henares</li>
+<li>125 detached houses in San Martín de la Vega</li>
+<li>99 dwellings in "Ensanche de Vallecas" (Madrid)</li>
+<li>135 dwellings in Cee (A Coruña)</li>
+<li>44 detached houses in Ciudad Real</li>
+<li>250 dwellings in Estepona (Malaga)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>BIM management</h5>
+<ul>
+<li>Urban complex in Fuencarral (Madrid)</li>
+<li>School in Kungsholmen (Stockholm, Sweden)</li>
+<li>Hospital ambulance building (Huddinge, Sweden)</li>
+<li>Hospital in Täby (Sweden)</li>
+<li>Sports building Nacka bollhall (Sweden)</li>
+<li>Residential building in Klaravägen (Stockholm, Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Signage</h5>
+<ul>
+<li>Hospital de Huddinge (Sweden)</li>
+</ul>
+</div>
+<div class="reference-category">
+<h5>Database. 20th-Century Western Architecture</h5>
+<ul>
+<li>Book "Un canon de Arquitectura moderna (1900-2000)"</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Other Works section -->
+<div class="other-works">
+<h3>OTHER WORKS</h3>
+<ul class="other-works-list">
+<li>Office building at Calle Jazmín (Madrid)</li>
+<li>Office building (Pinar de Chamartín, Madrid)</li>
+<li>Office building at Calle de Santa Leonor (Madrid)</li>
+<li>Public facility building at Calle Xaudaró (Madrid)</li>
+<li>Change of use from office building to hotel, Hortaleza (Madrid)</li>
+<li>Terraced houses (Barajas)</li>
+<li>Residential building at Calle de los misterios (Madrid)</li>
+<li>Terraced houses in Aravaca</li>
+<li>Commercial premises at Avenida de los Andes (Madrid)</li>
+<li>Residential building at Gran Vía de Hortaleza (Madrid)</li>
+<li>Residential building at Avenida de Daroca (Madrid)</li>
+<li>Office building in Ciudad Lineal (Madrid)</li>
+<li>Commercial premises for a security company in Mérida, (Badajoz)</li>
+<li>Commercial premises for a security company (Majadahonda)</li>
+<li>Commercial premises for a plumbing company (Majadahonda)</li>
+<li>Commercial premises for a telecommunications company Telyges (Villanueva del Pardillo)</li>
+<li>Greenhouse at the penthouse of a residential building (Majadahonda)</li>
+<li>Fit-out of an office building at Paseo de Recoletos (Madrid)</li>
+<li>Large industrial equipment Foundations (Cogeneration plant in A Coruña)</li>
+<li>Steel structure for interconnection pipe racks (Refinery Repsol, A Coruña)</li>
+</ul>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-nav">
+<ul>
+<li><a href="homeeng.html">Home</a></li>
+<li><a href="archeng.html">Architecture</a></li>
+<li><a href="welleng.html">Wellbeing</a></li>
+<li><a href="intereng.html">International</a></li>
+<li class="active"><a href="projeng.html">Projects</a></li>
+<li><a href="mediaeng.html">Media</a></li>
+<li><a href="contacteng.html">Contact</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<ul>
+<p><a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a></p>
+</ul>
+<p>🔊(+34) 667.817.991</p>
+</div>
+<div class="legal-links">
+<a href="#">Legal Notice</a>
+<a href="#">Data Protection Policy</a>
+</div>
+<!-- Associations logos / sellos section -->
+<div class="associations">
+<h3>Member of:</h3>
+<p></p>
+<div class="members">
+<div class="logomember coam-logo">
+<a href="https://coam.org">
+<img alt="Miembro del COAM" src="img/coam-logo.jpg" title="Miembro del Colegio Oficial de Arquitectos de Madrid"/>
+<h4></h4>
+<p></p>
+</a>
+</div>
+<div class="logomember cscae-logo">
+<a href="https://www.cscae.com">
+<img alt="Miembro del CSCAE" src="img/cscae-logo.png" title="Miembro del Consejo Superior de Colegios de Arquitectos de España"/>
+<h4></h4>
+<p></p>
+</a>
+</div>
+</div>
+</div>
+<div class="copyright">
+<p>© 2025 Santiago López Rodríguez. All rights reserved.</p>
+<p>Ljudtopia™ is a trademark pending registration.</p>
+</div>
+</div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
