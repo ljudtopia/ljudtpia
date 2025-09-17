@@ -1,254 +1,588 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio - LJUDTOPIA - Arquitectura · Bienestar · Salud</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inicio - LJUDTOPIA - Arquitectura · Bienestar · Salud</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
 </head>
+
 <body>
-    <!-- Header Section Modificado -->
-    <header class="site-header">
-        <div class="container">
-            <!-- Logo Section - Mismo ancho que sidebar -->
-            <div class="logo">
-                <a href="homeesp.html">
-                    <img src="img/Logo.jpeg" alt="LJUDTOPIA Logo" class="logo-img">
-                    <p class="tagline">ARQUITECTURA · BIENESTAR · SALUD</p>
-                </a>
-            </div>
-            
-            <!-- Header Right Section -->
-            <div class="header-right">
-                <!-- Language Selector -->
-                <div class="language-selector">
-                    <a href="homeesp.html" class="active"><img src="img/flag-spain.png" alt="Español"></a>
-                    <a href="homesve.html"><img src="img/flag-sweden.png" alt="Svenska"></a>
-                    <a href="homeeng.html"><img src="img/flag-uk.png" alt="English"></a>
-                    <a href="homedeu.html"><img src="img/flag-germany.png" alt="Deutsch"></a>
-                </div>
 
-                <!-- Language Selector (Mobile Dropdown) -->
-                <div class="lang-mobile" aria-label="Selector de idioma en móvil">
-                    <button class="lang-toggle" aria-haspopup="listbox" aria-expanded="false">
-                        <img class="lang-current-flag" src="img/flag-spain.png" alt="Idioma actual: Español">
-                        <span class="lang-toggle-label">Español</span>
-                        <span class="visually-hidden">Cambiar idioma</span>
-                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                    </button>
-                    <ul class="lang-menu" role="listbox" aria-label="Selecciona idioma">
-                        <li role="option" aria-selected="true">
-                            <a href="homeesp.html" data-lang="es">
-                                <img src="img/flag-spain.png" alt="">
-                                <span>Español</span>
-                            </a>
-                        </li>
-                        <li role="option">
-                            <a href="homesve.html" data-lang="sv">
-                                <img src="img/flag-sweden.png" alt="">
-                                <span>Svenska</span>
-                            </a>
-                        </li>
-                        <li role="option">
-                            <a href="homeeng.html" data-lang="en">
-                                <img src="img/flag-uk.png" alt="">
-                                <span>English</span>
-                            </a>
-                        </li>
-                        <li role="option">
-                            <a href="homedeu.html" data-lang="de">
-                                <img src="img/flag-germany.png" alt="">
-                                <span>Deutsch</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+<!-- Header Section Modified -->
+<header class="site-header">
+<div class="container">
+<!-- Logo Section - Mismo ancho que sidebar -->
+<div class="logo">
+<a href="homeesp.html">
+<img alt="LJUDTOPIA Logo" class="logo-img" src="img/Logo.jpeg"/>
+<p class="tagline">ARQUITECTURA · BIENESTAR · SALUD</p>
+</a>
+</div>
+<!-- Header Right Section -->
+<div class="header-right">
+<!-- Language Selector -->
+<div class="language-selector">
+<a class="active" href="homeesp.html"><img alt="Español" src="img/flag-spain.png"/></a>
+<a href="homesve.html"><img alt="Svenska" src="img/flag-sweden.png"/></a>
+<a href="homeeng.html"><img alt="English" src="img/flag-uk.png"/></a>
+<a href="homedeu.html"><img alt="Deutsch" src="img/flag-germany.png"/></a>
+</div>
+<!-- Language Selector (Mobile Dropdown) -->
+<div aria-label="Selector de idioma en móvil" class="lang-mobile">
+<button aria-expanded="false" aria-haspopup="listbox" class="lang-toggle">
+<img alt="Idioma actual: Español" class="lang-current-flag" src="img/flag-spain.png"/>
+<span class="lang-toggle-label">Idioma</span>
+<span class="visually-hidden">Cambiar idioma</span>
+<svg aria-hidden="true" class="chevron" height="16" viewbox="0 0 24 24" width="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"></path></svg>
+</button>
+<ul aria-label="Selecciona idioma" class="lang-menu" role="listbox">
+<li aria-selected="true" role="option">
+<a data-lang="es" href="homeesp.html">
+<img alt="" src="img/flag-spain.png"/>
+<span>Español</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="sv" href="homesve.html">
+<img alt="" src="img/flag-sweden.png"/>
+<span>Svenska</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="en" href="homeeng.html">
+<img alt="" src="img/flag-uk.png"/>
+<span>English</span>
+</a>
+</li>
+<li role="option">
+<a data-lang="de" href="homedeu.html">
+<img alt="" src="img/flag-germany.png"/>
+<span>Deutsch</span>
+</a>
+</li>
+</ul>
+</div>
+<!-- Mobile Menu Toggle -->
+<div class="menu-toggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</div>
+</div>
+</header>
 
-                <!-- Mobile Menu Toggle -->
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Navigation Menu -->
-    <nav class="main-nav">
-        <div class="container">
-            <ul>
-                <li class="active"><a href="homeesp.html">Inicio</a></li>
-                <li><a href="archesp.html">Arquitectura</a></li>
-                <li><a href="wellesp.html">Bienestar</a></li>
-                <li><a href="interesp.html">Internacional</a></li>
-                <li><a href="projesp.html">Proyectos</a></li>
-                <li><a href="mediaesp.html">Media</a></li>
-                <li><a href="contactesp.html">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <!-- Main Content -->
-    <main>
-        <div class="sidebar">
-            <!-- Sidebar images -->
-            <div class="sidebar-image">
-                <img src="img/sidebar-1.jpg" alt="Campus Albano, Stockholm">
-            </div>
-         </div>
-        
-        <div class="content-area">
-            <!-- Hero section -->
-            <section class="inicio">
-                <h2>NUESTRA EMPRESA. Presentación</h2>
-                <div class="sobre-nosotros">
-                    <div class="prefacio">
-                        <h3>LJUDTOPIA™ vs. UTOPIA</h3>
-                        <div class="intro-text">
-                        <p>En contraposición al concepto de utopía, hemos creado el término LJUDTOPIA, formado por:</p>
-                        <ul>
-                            <li>LJUD, que significa "sonido" en sueco, y de:</li>
-                            <li>UTOPIA, que se refiere a "algo imaginado pero, por definición, de muy difícil realización o inalcanzable".</li>
-                        </ul>
-                        <p>LJUDTOPIA define nuestro trabajo: <a>proyectos hechos realidad</a> en forma de entornos saludables y sanadores.</a></p>
-                        </div>
-                        <h3><em>Proyectos Ljudtópicos</em> vs. Proyectos utópicos</h3>
-                        <div class="intro-text">
-                            <p>El proyecto utópico es aquel inalcanzable o que no llega a materializarse. El <em>proyecto ljudtópico</em>, en cambio, fija objetivos ambiciosos y niveles de exigencia elevados… y los consigue, alcanzando el <a>resultado esperado por nuestros clientes</a>.</p>
-                        </div>
-                    </div>
-                    <!-- Quienes somos section -->
-                    <div class="quienes-somos">
-                        <h3>QUIENES SOMOS</h3>
-                        <p><strong>Ljudtopia</strong> es una empresa de arquitectura que reúne, en una sola plataforma, los servicios que veníamos ofreciendo de forma independiente.</p>
-                        <p>Somos una oficina internacional hispano-sueca establecida en Madrid (España), que trabaja en todo el territorio nacional y que desarrolla todo tipo de proyectos arquitectónicos integrales, tanto de obra nueva como de rehabilitación. Estamos especializados en sistemas constructivos avanzados, arquitectura tradicional y patología edificatoria, trabajando bajo los más altos estándares internacionales de calidad <a>para crear entornos que mejoren la salud de las personas</a>.</p>
-                        <p>Una empresa donde se trasciende el concepto tradicional de Arquitectura, abarcando el conocimiento proporcionado por disciplinas como:</p>
-                        <ul>
-                            <li>Arquitectura bioclimática</li>
-                            <li>Eficiencia energética</li>
-                            <li>Inteligencia artificial aplicada al diseño</li>
-                            <li>Neuroarquitectura</li>
-                            <li>Acústica en la edificación</li>
-                            <li>Arquitectura sostenible</li>
-                        </ul>
-                        <p>Un conocimiento que aporta un valor decisivo al bienestar de quienes habitan los espacios que proyectamos.</p>
-                        
-                        <h3>Nuestra trayectoria</h3>
-                        <p>Venimos de la tradición del aprendizaje del oficio de arquitecto sobre el terreno, de la mano de grandes profesionales, encargados y maestros de obra. En oficina, nos formamos en la delineación tradicional con tinta y tablero, aprendiendo de todas las disciplinas junto a arquitectos, aparejadores, calculistas e ingenieros de talla internacional. Más de 40 años después, somos una oficina consolidada que desarrolla proyectos ejecutivos completos de arquitectura.</p>
-                        <h3>Construcción</h3>
-                        <p>Para materializar un proyecto tan ambicioso como <strong>Ljudtopia</strong> es imprescindible contar con una base sólida: una trayectoria de obra construida.</p>
-                        <p>Afrontar los retos de la arquitectura contemporánea y alcanzar metas de <a> excelencia y bienestar</a> exige saber cómo se construye bien y saber integrar la técnica, medios y materiales actuales con el conocimiento de siglos de evolución de la Arquitectura.</p>
-                        <p>Nuestra experiencia abarca desde sistemas constructivos tradicionales (hormigón, acero, madera, ladrillo, piedra…) hasta soluciones prefabricadas e industrializadas. Esta diversidad <a>nos da una clara ventaja</a> a la hora de prever contratiempos, tanto en la fase de proyecto como en la ejecución, así como en la prevención y resolución de complejas problemáticas como la transmisión del ruido hacia y dentro de viviendas y locales.</p>
-                    </div>
-                    <div class="nuestro-objetivo">
-                        <h3>NUESTRO OBJETIVO</h3>
-                        <div class="intro-text">
-                        <p>El objetivo de <strong>Ljudtopia</strong> es doble:</p>
-                        <p>1. Ofrecer un servicio de <a>máxima calidad</a> en nuestros proyectos, desde una perspectiva holística y actual, con la experiencia acumulada en todas las áreas de la arquitectura y con la vista puesta en la satisfacción total del cliente.</p>
-                        <p>2. <a>Difundir información y contenidos de calidad</a>, tanto sobre nuestros proyectos como sobre obras nacionales e internacionales de especial interés, para convertir nuestra plataforma en un referente del sector, útil tanto para clientes como para profesionales.</p>
-                    </div>
-                </div>
+<!-- Navigation Menu -->
+<nav class="main-nav">
+<div class="container">
+<ul>
+<li class="active"><a href="homeesp.html">Inicio</a></li>
+<li><a href="archesp.html">Arquitectura</a></li>
+<li><a href="soundesp.html">Acústica</a></li>
+<li><a href="wellesp.html">Bienestar</a></li>
+<li><a href="projesp.html">Trabajos</a></li>
+<li><a href="aboutesp.html">Empresa</a></li>
+</ul>
+</div>
+</nav>
 
-                <!-- Team information -->
-                <div class="team-info">
-                     <div class="team-text">
-                        <p class="bold">Santiago López Rodríguez</p>
-                        <p class="texto-derecha">Fundador y Director de Ljudtopia</p>
-                        <p class="texto-derecha">Arquitecto Fundador de Ljudtopia</p>
-                        <p class="texto-derecha">Arquitecto Superior (UPM-ETSAM) | Byggnadskonstruktör</p>
-                    </div>
-                    <div class="team-photo">
-                        <img src="img/santiago-lopez.jpg" alt="Santiago López Rodríguez">
-                    </div>
-                </div>
-                
-                <!-- Contact CTA -->
-                <div class="cta-presupuesto">
-                    <h3>PRESUPUESTO A MEDIDA</h3>
-                    <p>Contáctenos hoy mismo en: <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a> y le facilitamos en el plazo de 24h un presupuesto para su idea de proyecto o una orientación gratuita para el problema que se le haya presentado.</p>
-                </div>
-                
-                <!-- Language help section moved here -->
-                <div class="language-help">
-                    <p>Para residentes extranjeros en España:</p>
-                    <p>Con objeto de agilizar los proyectos así como cualquier tipo de gestión, le ayudamos en su propio idioma desde el primer momento:</p>
-                    <div class="language-options">
-                        <div class="lang-option swedish">
-                            <a href="intersve.html">
-                                <img src="img/flag-sweden.png" alt="Svenska">
-                                <h4>VI KAN HJÄLPA DIG PÅ SVENSKA</h4>
-                                <p>(Acceso a contenido específico en idioma sueco)</p>
-                            </a>
-                        </div>
-                        <div class="lang-option english">
-                            <a href="intereng.html">
-                                <img src="img/flag-uk.png" alt="English">
-                                <h4>WE CAN HELP YOU IN ENGLISH</h4>
-                                <p>(Acceso a contenido específico en idioma inglés)</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-nav">
-                <ul>
-                    <li class="active"><a href="homeesp.html">Inicio</a></li>
-                    <li><a href="archesp.html">Arquitectura</a></li>
-                    <li><a href="wellesp.html">Bienestar</a></li>
-                    <li><a href="interesp.html">Internacional</a></li>
-                    <li><a href="projesp.html">Proyectos</a></li>
-                    <li><a href="mediaesp.html">Media</a></li>
-                    <li><a href="contactesp.html">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <ul>
-                    <p><a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a></p>
-                </ul>
-                <p>🔊(+34) 667.817.991</p>
-            </div>
-                <div class="legal-links">
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Política de privacidad</a>
-                </div>
+<!-- Main Content -->
+<main>
+<div class="sidebar">
+<!-- Sidebar images -->
+<div class="sidebar-image">
+<img alt="Homepage Madrid Puerta Alcala" src="img/homepage-puerta-toledo.jpg"/>
+</div>
+</div>
+<div class="content-area">
 
-            <!-- Associations logos / sellos section -->
-            <div class="associations">
-                <h3>Miembro de:</h3>
-                <p></p>
-                <div class="members">
-                    <div class="logomember coam-logo">
-                        <a href="https://coam.org">
-                            <img src="img/coam-logo.jpg" alt="Miembro del COAM" title="Miembro del Colegio Oficial de Arquitectos de Madrid">
-                            <h4></h4>
-                            <p></p>
-                        </a>
-                    </div>
-                    <div class="logomember cscae-logo">
-                        <a href="https://www.cscae.com">
-                            <img src="img/cscae-logo.png" alt="Miembro del CSCAE" title="Miembro del Consejo Superior de Colegios de Arquitectos de España">
-                            <h4></h4>
-                            <p></p>
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!-- Hero section -->
+<section class="inicio">
+<h2>LJUDTOPIA: ARQUITECTURA Y CONSTRUCCION</h2>
+<div class="prologo">
+    <div class="prologo-parrafo-plus-image">
+      <div class="prologo-parrafo-homepage">
+        <h3>SERVICIOS PROFESIONALES DE ARQUITECTURA</h3>
+        <p><strong>Ljudtopia</strong> es una empresa de Arquitectura que trabaja en toda España con una larga trayectoria de más de 30 años en el sector de la Construcción y que reúne, en una sola plataforma, todo tipo de servicios profesionales relacionados con la Arquitectura.</p>
+        <p>Nuestros servicios abarcan desde el asesoramiento técnico e inmobiliario, la dirección y seguimiento de obra, hasta la redacción de cualquier tipo de proyecto arquitectónico.</p>
+        <p>Nuestro trabajo aporta a su proyecto:</p>
+        <ul>
+        <li>- Ahorro de tiempos y costes innecesarios</li>
+        <li>- Calidad del trabajo avalada por nuestra experiencia</li>
+        <li>- Empleo de soluciones y materiales que benefician a su salud</li>
+        </ul>
+          <div class="homepage-prologo-photo">
+          <img src="img/projects_homepage.png" alt="Projects Architecture Drawings">
+          </div>
+      </div>
+    </div>
 
-            <div class="copyright">
-                <p>© 2025 Santiago López Rodríguez. Todos los derechos reservados.</p>
-                <p>Ljudtopia es una marca comercial en proceso de registro.</p>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="js/main.js"></script>
+    <!-- ESPECIALISTAS EN SOLUCIONES -->
+    <div class="prologo-parrafo-plus-image">
+      <div class="prologo-parrafo-homepage">
+        <h3>GARANTIA EN OBRAS DE REFORMA</h3>
+        <p>Ofrecemos un servicio de asesoría técnica independiente para clientes que desean llevar a cabo una obra de reforma, rehabilitación o nueva construcción. Nuestro objetivo es acompañarle en todo el proceso de decisión, aportando experiencia, rigor y transparencia.</p>
+        <p>Usted contrata a una empresa constructora, nosotros nos encargamos de dar apoyo técnico y Usted se despreocupa hasta la entrega de la obra.</p>
+        <p>(La elección y contratación final de la empresa constructora corresponde siempre al cliente, nosotros actuamos con total neutralidad y sin vínculos económicos con las empresas constructoras, <u>garantizando así un proceso claro y libre de conflictos de interés</u>)</p>
+        <p>Nuestro servicio aporta a su obra de reforma:</p>
+        <ul>
+        <li>- Valor a su local o vivienda</li>
+        <li>- Garantía añadida al trabajo realizado por la empresa constructora</li>
+        <li>- Tranquilidad para Usted en el tiempo</li>
+        </ul>
+          <div class="homepage-prologo-photo">
+          <img src="img/renovation_work_homepage.png" alt="Renovation Work Construction">
+          </div>
+      </div>
+    </div>
+
+  <!-- TIPOS DE TRABAJOS: Accesos directos -->
+  <div class="prologo-parrafo02">
+  <!-- Contenedor de casos -->
+  <div class="contenedor-principal">
+  <h2 class="titulo-principal">¿Cómo le podemos ayudar?</h2>
+  <input class="tab-toggle" type="radio" id="tab-none" name="tabgrp" checked>
+
+<div class="contenedor-secundario">
+<input class="tab-toggle" id="tab-1" name="tabgrp" type="radio"/>
+<h2 class="titulo-secundario"><label for="tab-1" role="button">¿Necesita hacer una obra de REFORMA?</label></h2>
+<div class="contenedor-apartados tarjetas">
+
+<!-- Apartado 01 -->
+<input class="card-lock" id="card-1-1" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="renovationesp.html">Puntual/Parcial/Integral</a>
+</div>
+<label class="tarjeta-body" for="card-1-1"><div class="contenedor-imagen">
+<img alt="Restoration complete" class="apartado-imagen" src="img/restoration_complete.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 02 -->
+<input class="card-lock" id="card-1-2" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="roofesp.html">Cubiertas/Tejados/Terrazas</a>
+</div>
+<label class="tarjeta-body" for="card-1-1"><div class="contenedor-imagen">
+<img alt="Roof restoration" class="apartado-imagen" src="img/roof_restoration.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 03 -->
+<input class="card-lock" id="card-1-3" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="energyesp.html">Instalaciones / Aislamiento</a>
+</div>
+<label class="tarjeta-body" for="card-1-2"><div class="contenedor-imagen">
+<img alt="Energy eficiency" class="apartado-imagen" src="img/energy-certified.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 04 -->
+<input class="card-lock" id="card-1-4" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="humidityesp.html">Humedades</a>
+</div>
+<label class="tarjeta-body" for="card-1-3"><div class="contenedor-imagen">
+<img alt="Humedades en edificaciones" class="apartado-imagen" src="img/mold_on_wall.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 05 -->
+<input class="card-lock" id="card-1-5" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="noiseesp.html">Protección frente a ruidos</a>
+</div>
+<label class="tarjeta-body" for="card-1-4"><div class="contenedor-imagen">
+<img alt="Child acoustics" class="apartado-imagen" src="img/child.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 06 -->
+<input class="card-lock" id="card-1-6" type="checkbox"/><div class="apartado01ref tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="accessesp.html">Accesibilidad</a>
+</div>
+<label class="tarjeta-body" for="card-1-4"><div class="contenedor-imagen">
+<img alt="Universal Accesibility" class="apartado-imagen" src="img/accesibility.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+
+</div>
+</div>
+
+
+<div class="contenedor-secundario">
+<input class="tab-toggle" id="tab-2" name="tabgrp" type="radio"/>
+<h2 class="titulo-secundario"><label for="tab-2" role="button">¿Tiene que presentar un PROYECTO en su ayuntamiento?</label></h2>
+<div class="contenedor-apartados tarjetas">
+
+<!-- Apartado 07 -->
+<input class="card-lock" id="card-2-1" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="arkesp.html">Arquitectura</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-2-1"><div class="contenedor-imagen">
+<img alt="Architecture Big House" class="apartado-imagen" src="img/architecture_big_house.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 08 -->
+<input class="card-lock" id="card-2-2" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="structureesp.html">Estructura</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-2-1"><div class="contenedor-imagen">
+<img alt="Tensile Structure" class="apartado-imagen" src="img/structure_tensile.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 09 -->
+<input class="card-lock" id="card-2-3" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="facadeesp.html">Fachada</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-2-1"><div class="contenedor-imagen">
+<img alt="Facade Brick Curve" class="apartado-imagen" src="img/facade_project.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 10 -->
+<input class="card-lock" id="card-2-4" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="licenseesp.html">Licencia de Actividades</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-2-2"><div class="contenedor-imagen">
+<img alt="License Documentation Drawings" class="apartado-imagen" src="img/license_documentation.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 11 -->
+<input class="card-lock" id="card-2-5" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="acousticsesp.html">Insonorización</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-2-3"><div class="contenedor-imagen">
+<img alt="Acoustic panel" class="apartado-imagen" src="img/acoustic_panel.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+</div>
+</div>
+
+
+<div class="contenedor-secundario">
+<input class="tab-toggle" id="tab-3" name="tabgrp" type="radio"/>
+<h2 class="titulo-secundario"><label for="tab-3" role="button">o quizás... ¿quiere SENTIRSE MEJOR en su hogar o negocio?</label></h2>
+<div class="contenedor-apartados tarjetas">
+
+<!-- Apartado 12 -->
+<input class="card-lock" id="card-3-1" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="vitalityesp.html">Bienestar</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-3-2"><div class="contenedor-imagen">
+<img alt="Wellbeing in Architecture" class="apartado-imagen" src="img/familia.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 13 -->
+<input class="card-lock" id="card-3-2" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="lightesp.html">Iluminación natural</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-3-1"><div class="contenedor-imagen">
+<img alt="Skylight Kitchen" class="apartado-imagen" src="img/skylight_kitchen.png"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 14 -->
+<input class="card-lock" id="card-3-3" type="checkbox"/><div class="apartado02arq tarjeta">
+<div class="apartado-superior">
+<a class="apartado-link" href="localesp.html">Acondicionamiento acústico</a>
+<div class="linea-divisoria"></div>
+</div>
+<label class="tarjeta-body" for="card-3-3"><div class="contenedor-imagen">
+<img alt="Office Acoustic Panels" class="apartado-imagen" src="img/office_acoustic_panels.jpg"/>
+</div><div class="apartado-texto">
+<p></p>
+</div></label></div>
+
+<!-- Apartado 15 -->
+
+
+<!-- Apartado 16 -->
+
+
+</div>
+</div>
+  </div>
+  </div>
+</div>
+
+<!-- Language help section moved here -->
+<div class="language-help">
+<p>Para residentes extranjeros en España:</p>
+<p>Con objeto de agilizar los proyectos así como cualquier tipo de gestión, le ayudamos en su propio idioma desde el primer momento:</p>
+<div class="language-options">
+<div class="lang-option swedish">
+<a href="archsve.html#tjänster_svenska_invånare">
+<img alt="Svenska" src="img/flag-sweden.png"/>
+<h4>VI KAN HJÄLPA DIG PÅ SVENSKA</h4>
+<p>(Acceso a contenido específico en idioma sueco)</p>
+</a>
+</div>
+<div class="lang-option english">
+<a href="archeng.html#services_international_residents">
+<img alt="English" src="img/flag-uk.png"/>
+<h4>WE CAN HELP YOU IN ENGLISH</h4>
+<p>(Acceso a contenido específico en idioma inglés)</p>
+</a>
+</div>
+</div>
+</div>
+
+<!-- Contact CTA -->
+<div class="cta-presupuesto">
+<h3>PRESUPUESTO A MEDIDA</h3>
+<p>Contáctenos hoy mismo en: <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a> y le facilitamos en el plazo de 24h un presupuesto para su idea de proyecto o una orientación gratuita para el problema que se le haya presentado.</p>
+<p>Puede obtener una aproximación al presupuesto de su obra introduciendo datos básicos con nuestra: <a href="archesp.html#seccion-calculadora-presupuesto" style="color: #1c569e">Calculadora de presupuesto y honorarios</a></p>
+</div>
+</section>
+
+<!-- Nota Legal / Disclaimer -- Aclara el alcance de la actuación del arquitecto  -->
+<p class="nota-legal">
+<strong>Nota legal:</strong> Los servicios de “ejecución de obras”, “reformas llave en mano” o similares se entienden siempre como gestión, coordinación y dirección facultativa de los trabajos. La ejecución material de las obras corresponde exclusivamente a empresas constructoras debidamente inscritas en el Registro de Empresas Acreditadas (REA), conforme a la normativa vigente. El arquitecto actúa en todo momento como profesional independiente, responsable de la redacción de proyectos, la tramitación administrativa y la dirección técnica de las obras.
+</p>
+
+</div>
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container">
+<div class="footer-nav">
+<ul>
+<li class="active"><a href="homeesp.html">Inicio</a></li>
+<li><a href="archesp.html">Arquitectura</a></li>
+<li><a href="soundesp.html">Acústica</a></li>
+<li><a href="wellesp.html">Bienestar</a></li>
+<li><a href="projesp.html">Trabajos</a></li>
+<li><a href="aboutesp.html">Empresa</a></li>
+</ul>
+</div>
+<div class="footer-contact">
+<ul>
+<p><a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a></p>
+</ul>
+<p>🔊(+34) 667.817.991</p>
+</div>
+
+<!-- APARTADO EMERGENTE AVISO LEGAL -->
+<div class="legal-links">
+<p>
+<a class="aviso-link" onclick="openModal()">Aviso Legal</a>
+                 | 
+                <a class="aviso-link" onclick="openPrivacyModal()">Política de Privacidad</a>
+</p>
+<!-- Overlay Legal Advice-->
+<div class="modal-overlay" id="modalOverlay">
+<div class="modal">
+<!-- NUEVA BARRA SUPERIOR -->
+<div class="modal-topbar">
+<span class="close-btn" onclick="closeModal()">×</span>
+</div>
+<!-- Encabezado a 20px por debajo de la línea de la X -->
+<div class="modal-header">
+<h2>Aviso Legal</h2>
+<img alt="Bandera de España" src="img/flag-spain.png"/>
+</div>
+<div class="modal-content">
+<p>En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes aspectos legales:</p>
+
+<p><strong>Titular del sitio web:</strong><br>
+Santiago López Rodríguez<br>
+Arquitecto Superior colegiado nº 14.976 en el Colegio Oficial de Arquitectos de Madrid (COAM)<br>
+NIF: 07491829Q<br>
+Domicilio profesional: Avenida de la ONU, 32, 28936, Móstoles, Madrid, España<br>
+Correo electrónico de contacto: <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a><br>
+Teléfono: +34 667817991</p>
+
+<p>El titular ejerce su actividad como <strong>empresario individual (autónomo)</strong>, actuando bajo el <strong>nombre comercial “Ljudtopia”</strong>, dedicado a la prestación de servicios de arquitectura, construcción, interiorismo, acústica y consultoría técnica.</p>
+
+<p><strong>1. Objeto</strong></p>
+<p>El presente sitio web tiene como finalidad ofrecer información sobre los servicios profesionales de arquitectura, construcción, interiorismo y acústica desarrollados por el titular, así como facilitar el contacto con clientes y personas interesadas.</p>
+<p>La información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento técnico o jurídico vinculante.</p>
+
+<p><strong>2. Condiciones de uso</strong></p>
+<p>El acceso y uso de este sitio atribuye la condición de Usuario, lo que implica la aceptación plena de las presentes condiciones desde el mismo momento de la navegación.</p>
+<p>El Usuario se compromete a hacer un uso adecuado de los contenidos, absteniéndose de emplearlos con fines ilícitos, contrarios a la buena fe, o que puedan causar daño a sistemas físicos o lógicos del titular o de terceros.</p>
+
+<p><strong>3. Propiedad intelectual e industrial</strong></p>
+<p>Todos los contenidos de este sitio web, incluyendo textos, imágenes, diseños, logotipos, planos, documentos y demás elementos, están protegidos por la legislación española sobre propiedad intelectual e industrial.</p>
+<p>Queda prohibida la reproducción total o parcial, distribución o transformación de dichos contenidos sin autorización expresa y por escrito del titular.</p>
+
+<p><strong>4. Enlaces externos</strong></p>
+<p>El sitio web puede incluir enlaces a páginas de terceros que se ofrecen únicamente con carácter informativo.</p>
+<p>El titular no asume responsabilidad alguna sobre el contenido, disponibilidad o políticas de privacidad de dichas páginas externas, correspondiendo exclusivamente a sus respectivos titulares.</p>
+
+<p><strong>5. Responsabilidad</strong></p>
+<p>El titular no se hace responsable de los daños que pudieran derivarse de interferencias, interrupciones, virus informáticos, averías telefónicas o desconexiones motivadas por causas ajenas.</p>
+<p>Igualmente, no garantiza la ausencia de errores en los contenidos publicados, aunque se compromete a adoptar todas las medidas necesarias para corregirlos en el menor plazo posible.</p>
+
+<p><strong>6. Protección de datos personales</strong></p>
+<p>El tratamiento de los datos personales recogidos a través de este sitio web se regirá por lo establecido en la Política de Privacidad, conforme al Reglamento (UE) 2016/679 (RGPD) y la LOPDGDD 3/2018.</p>
+
+<p><strong>7. Política de cookies</strong></p>
+<p>Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de usuario. La utilización de cookies se regula en la Política de Cookies, donde se detalla su uso, finalidad y procedimientos para su desactivación.</p>
+
+<p><strong>8. Legislación aplicable y jurisdicción</strong></p>
+<p>El presente Aviso Legal se rige en todos sus extremos por la legislación española. En caso de conflicto o discrepancia, las partes se someterán a los Juzgados y Tribunales de la ciudad donde el titular tenga su domicilio profesional, salvo que la normativa en vigor determine otro fuero aplicable.</p>
+
+<p><strong>9. Exención de responsabilidad sobre la calculadora de honorarios</strong></p>
+<p>La calculadora de honorarios y de Presupuesto de Ejecución Material (PEM) disponible en esta página web tiene un carácter exclusivamente orientativo e informativo.</p>
+<p>Los resultados obtenidos no constituyen en ningún caso un presupuesto vinculante, una oferta contractual ni un baremo oficial de honorarios profesionales.</p>
+<p>Los honorarios de arquitectos y técnicos son libres, conforme a la normativa vigente (Ley 15/2007, de Defensa de la Competencia; Ley 7/1997, de medidas liberalizadoras en materia de suelo y colegios profesionales).</p>
+<p>Los importes estimados pueden variar en función de la complejidad, la ubicación, las condiciones urbanísticas, los plazos de ejecución, las características constructivas y las necesidades específicas de cada cliente.</p>
+<p>Para obtener un presupuesto personalizado será necesario solicitar una propuesta profesional individualizada.</p>
+<p>El titular de esta página no asume responsabilidad alguna por el uso que los usuarios realicen de los cálculos obtenidos a través de la herramienta.</p>
+</div>
+</div>
+</div>
+<!-- Modal: Política de Privacidad -->
+<div class="modal-overlay" id="modalOverlayPrivacy">
+<div aria-labelledby="privacy-title" aria-modal="true" class="modal" role="dialog">
+<!-- Barra superior con la X -->
+<div class="modal-topbar">
+<span class="close-btn" onclick="closePrivacyModal()">×</span>
+</div>
+<!-- Encabezado 20px por debajo de la línea de la X -->
+<div class="modal-header" style="margin-top:20px;">
+<h2 id="privacy-title">Política de Privacidad</h2>
+<!-- Usa el mismo archivo de bandera que en el otro modal -->
+<img alt="Bandera de España" src="img/flag-spain.png"/>
+</div>
+<!-- Zona con scroll si el texto es largo -->
+<div class="modal-content">
+<p>1. Responsable del tratamiento</p>
+<p>De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), se informa que los datos personales facilitados a través de este sitio web serán tratados por:</p>
+<p>Responsable: Santiago López Rodríguez, NIF/CIF: 07491829Q</p>
+<p>Domicilio social: Avenida de la ONU, 32, 28936, Móstoles, Madrid, España</p>
+<p>Correo electrónico de contacto: info@ljudtopia.com</p>
+<p>Teléfono: +34 667817991</p>
+<p>2. Finalidad del tratamiento</p>
+<p>Los datos recabados a través de los formularios de contacto de la web serán utilizados con la única finalidad de atender consultas, enviar información solicitada o gestionar comunicaciones profesionales relacionadas con los servicios de arquitectura, construcción e interiorismo del responsable.</p>
+<p>3. Legitimación</p>
+<p>La base legal para el tratamiento de sus datos es el consentimiento expreso del usuario, otorgado al aceptar esta política de privacidad antes de enviar cualquier formulario.</p>
+<p>4. Conservación de datos</p>
+<p>Los datos personales se conservarán mientras se mantenga la relación profesional o hasta que el interesado solicite su supresión, y en cualquier caso durante los plazos legalmente establecidos.</p>
+<p>5. Destinatarios</p>
+<p>Los datos no se cederán a terceros salvo obligación legal o cuando sea necesario para la prestación de un servicio vinculado directamente a la actividad profesional.</p>
+<p>6. Derechos del usuario</p>
+<p>El usuario puede ejercer en todo momento los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, enviando una solicitud junto con copia de su DNI/NIE al correo electrónico arriba indicado.</p>
+<p>Asimismo, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si considera que el tratamiento de sus datos infringe la normativa.</p>
+<p>7. Seguridad de la información</p>
+<p>El responsable adopta las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos personales, evitando su alteración, pérdida, tratamiento o acceso no autorizado.</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Associations logos / sellos section -->
+<div class="associations">
+<h3>Miembro de:</h3>
+<p></p>
+<div class="members">
+<div class="logomember colegiado_coam">
+<a href="https://www.coam.org/red-arquitectos/arquitecto/?arquitecto=santiago-lopez-rodriguez&id_coleg=14976">
+<img alt="Miembro del COAM" src="img/colegiado_coam.jpg" title="Arquitecto colegiado en el Colegio Oficial de Arquitectos de Madrid"/>
+</a>
+</div>
+
+<div class="logomember cchs-logo">
+<a href="https://camarahispanosueca.com/es">
+<img alt="Miembro de la CCHS" src="img/cchs-logo.png" title="Miembro de la Cámara de Comercio Hispano-sueca"/>
+</a>
+</div>
+</div>
+</div>
+
+<!-- SOCIAL MEDIA / LITTLE LOGOS -->
+<div class="socialmedia_buttons">
+<div class="littlebuttons">
+<div class="littlebutton linkedin-littlelogo">
+<a href="https://www.linkedin.com/company/ljudtopia">
+<img alt="LinkedIn" src="img/little_logo_linkedin.png" title="LinkedIn"/>
+</a>
+</div>
+<div class="littlebutton youtube-littlelogo">
+<a href="https://www.youtube.com/@Ljudtopia">
+<img alt="YouTube" src="img/little_logo_youtube.png" title="Youtube"/>
+</a>
+</div>
+<div class="littlebutton instagram-littlelogo">
+<a href="https://www.instagram.com/ljudtopia/">
+<img alt="Instagram" src="img/little_logo_instagram.png" title="Instagram"/>
+</a>
+</div>
+<div class="littlebutton tiktok-littlelogo">
+<a href="https://www.tiktok.com/@ljudtopia">
+<img alt="TikTok" src="img/little_logo_tiktok.png" title="TikTok"/>
+</a>
+</div>
+<div class="littlebutton facebook-littlelogo">
+<a href="https://www.facebook.com/people/Ljudtopia-Architecture-Wellbeing-Healing/pfbid02fx5u8hQ4ztdPZCPvBHvK4ZFYcmZpw7XugCApfx2MGjqeYs1ta63wVKAJ2Ga1CkFrl/?sk=about">
+<img alt="Facebook" src="img/little_logo_facebook.png" title="Facebook"/>
+</a>
+</div>
+<div class="littlebutton twitter-x-littlelogo">
+<a href="https://x.com/@ljudtopia">
+<img alt="Twitter-X" src="img/little_logo_x-twitter.png" title="Twitter-X"/>
+</a>
+</div>
+</div>
+</div>
+
+<!-- APARTADO Copyright e imagenes -->
+<div class="copyright">
+<p>© 2025 Santiago López Rodríguez. Todos los derechos reservados.</p>
+<p>Ljudtopia™ es una marca comercial en proceso de registro.</p>
+  <p style="font-size:10px; color:#6e7174; margin:0; line-height: 20px;">
+    Crédito de imágenes: Algunas imágenes utilizadas en este sitio web son cortesía de 
+    <a href="https://www.freepik.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Freepik</a> 
+    y 
+    <a href="https://www.pexels.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Pexels</a>.
+  </p>
+</div>
+
+</div>
+
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

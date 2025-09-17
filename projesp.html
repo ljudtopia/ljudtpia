@@ -81,11 +81,11 @@
             <ul>
                 <li><a href="homeesp.html">Inicio</a></li>
                 <li><a href="archesp.html">Arquitectura</a></li>
+                <li><a href="soundesp.html">Acústica</a></li>
                 <li><a href="wellesp.html">Bienestar</a></li>
-                <li><a href="interesp.html">Internacional</a></li>
-                <li class="active"><a href="projesp.html">Proyectos</a></li>
-                <li><a href="mediaesp.html">Media</a></li>
-                <li><a href="contactesp.html">Contacto</a></li>
+                <li class="active"><a href="projesp.html">Trabajos</a></li>
+                <li><a href="aboutesp.html">Empresa</a></li>
+                
             </ul>
         </div>
     </nav>
@@ -100,93 +100,19 @@
                 </div>
             </div>
         </div>
-
-        <style>
-            .image-carousel {
-                width: 100%;
-                overflow: hidden;
-                margin-top: 0px;
-                margin-left: 0px;
-            }
-            
-            .carousel-container {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
-            
-            .carousel-container img {
-                width: 100%;
-                height: auto;
-                flex-shrink: 0;
-                object-fit: contain;
-            }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Array con los nombres de las imágenes (ajusta según tus archivos)
-                const images = [
-                    'project-001.jpg',
-                    'project-002.jpg',
-                    'project-003.jpg',
-                    'project-004.jpg',
-                    'project-005.jpg',
-                    'project-006.jpg',
-                    'project-007.jpg',
-                    'project-008.jpg',
-                    'project-009.jpg',
-                    'project-010.jpg',
-                    'project-011.jpg',
-                    'project-012.jpg',
-                    'project-013.jpg',
-                    'project-014.jpg',
-                    'project-015.jpg',
-                    'project-016.jpg',
-                    'project-017.jpg',
-                    'project-018.jpg',
-                    'project-019.jpg',
-                    'project-020.jpg',
-                    'project-021.jpg',
-                    'project-022.jpg'
-                    // Añade más imágenes según necesites
-                ];
-                
-                const carouselContainer = document.querySelector('.carousel-container');
-                const imgPath = 'img-projects/'; // Ruta a tu carpeta de imágenes
-                
-                // Crear elementos img y añadirlos al carrusel
-                images.forEach(img => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = imgPath + img;
-                    imgElement.alt = "Imagen de proyecto";
-                    carouselContainer.appendChild(imgElement);
-                });
-                
-                // Configurar el carrusel
-                let currentIndex = 0;
-                const totalImages = images.length;
-                
-                function updateCarousel() {
-                    const offset = -currentIndex * 100;
-                    carouselContainer.style.transform = `translateX(${offset}%)`;
-                }
-                
-                // Cambiar de imagen cada segundo
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % totalImages;
-                    updateCarousel();
-                }, 2000);
-                
-                // Inicializar el carrusel
-                updateCarousel();
-            });
-        </script>
         
         <div class="content-area">
-            <!-- References section -->
-            <section class="referencias">
-                <h2>NUESTRO TRABAJO</h2>
-                <p>Selección de trabajos y colaboraciones de entre nuestras más de 300 referencias (ver también "Media")</p>
+
+            <!-- Contenedor para la imagen de fondo -->
+
+
+            <!-- Contenido que va SOBRE la imagen: Services section -->
+            <section class="archextended">
+                <div class="arqampliada">
+                    <h2>NUESTRO TRABAJO</h2>
+                    <p>Selección de trabajos y colaboraciones de entre nuestras más de 300 referencias</p>
+                </div>
+                
                 <div class="references-columns">
                     <!-- Column 1: Architecture Projects -->
                     <div class="reference-column">
@@ -209,6 +135,7 @@
                                 <li>Terraza de edificio comercial (Estocolmo, Suecia)</li>
                                 <li>Muros de hormigón armado. Lycée Moliere (Villanueva de la Cañada)</li>
                                 <li>Muro de contención en Sigüenza (Guadalajara)</li>
+                                <li>Muro de contención en Avenida comandante Franco (Madrid)</li>
                             </ul>
                         </div>
                         <h4>Proyectos Básicos y de Ejecución</h4>
@@ -426,8 +353,40 @@
                         <li>Estructura de acero para racks de tuberías de interconexión (Refinería Repsol, La Coruña)</li>
                     </ul>
                 </div>
-
             </section>
+            
+            <!-- Media List -->
+            <div class="media-links">
+                <h3>Enlaces a nuestras redes sociales</h3>
+                <div class="media-content">
+                    <div class="media-logo">
+                        <img src="img/media_Ljudtopia.jpg" alt="Logo_Media_Ljudtopia">
+                    </div>
+                    <div class="media-buttons">
+                        <div class="mediabutton linkedin">
+                            <a href="https://www.linkedin.com/company/ljudtopia">
+                                <img src="img/linkedin-logo.png" alt="Linkedin-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton youtube">
+                            <a href="https://www.youtube.com/@Ljudtopia">
+                                <img src="img/youtube-logo.png" alt="Youtube-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton instagram">
+                            <a href="https://www.instagram.com/ljudtopia/">
+                                <img src="img/instagram-logo.png" alt="Instagram-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton TikTok">
+                            <a href="https://www.tiktok.com/@ljudtopia">
+                                <img src="img/tiktok-logo.png" alt="TikTok-button">
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -438,11 +397,11 @@
                 <ul>
                     <li><a href="homeesp.html">Inicio</a></li>
                     <li><a href="archesp.html">Arquitectura</a></li>
+                    <li><a href="soundesp.html">Acústica</a></li>
                     <li><a href="wellesp.html">Bienestar</a></li>
-                    <li><a href="interesp.html">Internacional</a></li>
-                    <li class="active"><a href="projesp.html">Proyectos</a></li>
-                    <li><a href="mediaesp.html">Media</a></li>
-                    <li><a href="contactesp.html">Contacto</a></li>
+                    <li class="active"><a href="projesp.html">Trabajos</a></li>
+                    <li><a href="aboutesp.html">Empresa</a></li>
+                    
                 </ul>
             </div>
             <div class="footer-contact">
@@ -451,37 +410,194 @@
                 </ul>
                 <p>🔊(+34) 667.817.991</p>
             </div>
-                <div class="legal-links">
-                    <a href="#">Aviso Legal</a>
-                    <a href="#">Política de privacidad</a>
+
+            <!-- APARTADO EMERGENTE AVISO LEGAL -->
+            <div class="legal-links">
+                <p>
+                <a class="aviso-link" onclick="openModal()">Aviso Legal</a>
+                &nbsp;|&nbsp;
+                <a class="aviso-link" onclick="openPrivacyModal()">Política de Privacidad</a>
+                </p>
+
+                <!-- Overlay Legal Advice-->
+                <div id="modalOverlay" class="modal-overlay">
+                    <div class="modal">
+                        <!-- NUEVA BARRA SUPERIOR -->
+                        <div class="modal-topbar">
+                            <span class="close-btn" onclick="closeModal()">&times;</span>
+                        </div>
+                        <!-- Encabezado a 20px por debajo de la línea de la X -->
+                        <div class="modal-header">
+                            <h2>Aviso Legal</h2>
+                            <img src="img/flag-spain.png" alt="Bandera de España">
+                        </div>
+                        <div class="modal-content">
+<p>En cumplimiento de lo dispuesto en la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa a los usuarios de los siguientes aspectos legales:</p>
+
+<p><strong>Titular del sitio web:</strong><br>
+Santiago López Rodríguez<br>
+Arquitecto Superior colegiado nº 14.976 en el Colegio Oficial de Arquitectos de Madrid (COAM)<br>
+NIF: 07491829Q<br>
+Domicilio profesional: Avenida de la ONU, 32, 28936, Móstoles, Madrid, España<br>
+Correo electrónico de contacto: <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a><br>
+Teléfono: +34 667817991</p>
+
+<p>El titular ejerce su actividad como <strong>empresario individual (autónomo)</strong>, actuando bajo el <strong>nombre comercial “Ljudtopia”</strong>, dedicado a la prestación de servicios de arquitectura, construcción, interiorismo, acústica y consultoría técnica.</p>
+
+<p><strong>1. Objeto</strong></p>
+<p>El presente sitio web tiene como finalidad ofrecer información sobre los servicios profesionales de arquitectura, construcción, interiorismo y acústica desarrollados por el titular, así como facilitar el contacto con clientes y personas interesadas.</p>
+<p>La información publicada en esta web tiene carácter meramente informativo y no constituye asesoramiento técnico o jurídico vinculante.</p>
+
+<p><strong>2. Condiciones de uso</strong></p>
+<p>El acceso y uso de este sitio atribuye la condición de Usuario, lo que implica la aceptación plena de las presentes condiciones desde el mismo momento de la navegación.</p>
+<p>El Usuario se compromete a hacer un uso adecuado de los contenidos, absteniéndose de emplearlos con fines ilícitos, contrarios a la buena fe, o que puedan causar daño a sistemas físicos o lógicos del titular o de terceros.</p>
+
+<p><strong>3. Propiedad intelectual e industrial</strong></p>
+<p>Todos los contenidos de este sitio web, incluyendo textos, imágenes, diseños, logotipos, planos, documentos y demás elementos, están protegidos por la legislación española sobre propiedad intelectual e industrial.</p>
+<p>Queda prohibida la reproducción total o parcial, distribución o transformación de dichos contenidos sin autorización expresa y por escrito del titular.</p>
+
+<p><strong>4. Enlaces externos</strong></p>
+<p>El sitio web puede incluir enlaces a páginas de terceros que se ofrecen únicamente con carácter informativo.</p>
+<p>El titular no asume responsabilidad alguna sobre el contenido, disponibilidad o políticas de privacidad de dichas páginas externas, correspondiendo exclusivamente a sus respectivos titulares.</p>
+
+<p><strong>5. Responsabilidad</strong></p>
+<p>El titular no se hace responsable de los daños que pudieran derivarse de interferencias, interrupciones, virus informáticos, averías telefónicas o desconexiones motivadas por causas ajenas.</p>
+<p>Igualmente, no garantiza la ausencia de errores en los contenidos publicados, aunque se compromete a adoptar todas las medidas necesarias para corregirlos en el menor plazo posible.</p>
+
+<p><strong>6. Protección de datos personales</strong></p>
+<p>El tratamiento de los datos personales recogidos a través de este sitio web se regirá por lo establecido en la Política de Privacidad, conforme al Reglamento (UE) 2016/679 (RGPD) y la LOPDGDD 3/2018.</p>
+
+<p><strong>7. Política de cookies</strong></p>
+<p>Este sitio web utiliza cookies propias y de terceros para mejorar la experiencia de usuario. La utilización de cookies se regula en la Política de Cookies, donde se detalla su uso, finalidad y procedimientos para su desactivación.</p>
+
+<p><strong>8. Legislación aplicable y jurisdicción</strong></p>
+<p>El presente Aviso Legal se rige en todos sus extremos por la legislación española. En caso de conflicto o discrepancia, las partes se someterán a los Juzgados y Tribunales de la ciudad donde el titular tenga su domicilio profesional, salvo que la normativa en vigor determine otro fuero aplicable.</p>
+
+<p><strong>9. Exención de responsabilidad sobre la calculadora de honorarios</strong></p>
+<p>La calculadora de honorarios y de Presupuesto de Ejecución Material (PEM) disponible en esta página web tiene un carácter exclusivamente orientativo e informativo.</p>
+<p>Los resultados obtenidos no constituyen en ningún caso un presupuesto vinculante, una oferta contractual ni un baremo oficial de honorarios profesionales.</p>
+<p>Los honorarios de arquitectos y técnicos son libres, conforme a la normativa vigente (Ley 15/2007, de Defensa de la Competencia; Ley 7/1997, de medidas liberalizadoras en materia de suelo y colegios profesionales).</p>
+<p>Los importes estimados pueden variar en función de la complejidad, la ubicación, las condiciones urbanísticas, los plazos de ejecución, las características constructivas y las necesidades específicas de cada cliente.</p>
+<p>Para obtener un presupuesto personalizado será necesario solicitar una propuesta profesional individualizada.</p>
+<p>El titular de esta página no asume responsabilidad alguna por el uso que los usuarios realicen de los cálculos obtenidos a través de la herramienta.</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Modal: Política de Privacidad -->
+                <div id="modalOverlayPrivacy" class="modal-overlay">
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+                    <!-- Barra superior con la X -->
+                        <div class="modal-topbar">
+                            <span class="close-btn" onclick="closePrivacyModal()">&times;</span>
+                        </div>
+
+                    <!-- Encabezado 20px por debajo de la línea de la X -->
+                        <div class="modal-header" style="margin-top:20px;">
+                            <h2 id="privacy-title">Política de Privacidad</h2>
+                            <!-- Usa el mismo archivo de bandera que en el otro modal -->
+                            <img src="img/flag-spain.png" alt="Bandera de España">
+                        </div>
+
+                    <!-- Zona con scroll si el texto es largo -->
+                        <div class="modal-content">
+                            <p>1. Responsable del tratamiento</p>
+                            <p>De conformidad con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), se informa que los datos personales facilitados a través de este sitio web serán tratados por:</p>
+                            <p>Responsable: Santiago López Rodríguez, NIF/CIF: 07491829Q</p>
+                            <p>Domicilio social: Avenida de la ONU, 32, 28936, Móstoles, Madrid, España</p>
+                            <p>Correo electrónico de contacto: info@ljudtopia.com</p>
+                            <p>Teléfono: +34 667817991</p>
+                            <p>2. Finalidad del tratamiento</p>
+                            <p>Los datos recabados a través de los formularios de contacto de la web serán utilizados con la única finalidad de atender consultas, enviar información solicitada o gestionar comunicaciones profesionales relacionadas con los servicios de arquitectura, construcción e interiorismo del responsable.</p>
+                            <p>3. Legitimación</p>
+                            <p>La base legal para el tratamiento de sus datos es el consentimiento expreso del usuario, otorgado al aceptar esta política de privacidad antes de enviar cualquier formulario.</p>
+                            <p>4. Conservación de datos</p>
+                            <p>Los datos personales se conservarán mientras se mantenga la relación profesional o hasta que el interesado solicite su supresión, y en cualquier caso durante los plazos legalmente establecidos.</p>
+                            <p>5. Destinatarios</p>
+                            <p>Los datos no se cederán a terceros salvo obligación legal o cuando sea necesario para la prestación de un servicio vinculado directamente a la actividad profesional.</p>
+                            <p>6. Derechos del usuario</p>
+                            <p>El usuario puede ejercer en todo momento los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, enviando una solicitud junto con copia de su DNI/NIE al correo electrónico arriba indicado.</p>
+                            <p>Asimismo, podrá presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si considera que el tratamiento de sus datos infringe la normativa.</p>
+                            <p>7. Seguridad de la información</p>
+                            <p>El responsable adopta las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos personales, evitando su alteración, pérdida, tratamiento o acceso no autorizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Associations logos / sellos section -->
             <div class="associations">
                 <h3>Miembro de:</h3>
                 <p></p>
                 <div class="members">
-                    <div class="logomember coam-logo">
-                        <a href="https://coam.org">
-                            <img src="img/coam-logo.jpg" alt="Miembro del COAM" title="Miembro del Colegio Oficial de Arquitectos de Madrid">
-                            <h4></h4>
-                            <p></p>
+                    <div class="logomember colegiado_coam">
+                        <a href="https://www.coam.org/red-arquitectos/arquitecto/?arquitecto=santiago-lopez-rodriguez&id_coleg=14976">
+                            <img src="img/colegiado_coam.jpg" alt="Miembro del COAM" title="Arquitecto colegiado en el Colegio Oficial de Arquitectos de Madrid">
+
                         </a>
                     </div>
-                    <div class="logomember cscae-logo">
-                        <a href="https://www.cscae.com">
-                            <img src="img/cscae-logo.png" alt="Miembro del CSCAE" title="Miembro del Consejo Superior de Colegios de Arquitectos de España">
-                            <h4></h4>
-                            <p></p>
+
+                    <div class="logomember cchs-logo">
+                        <a href="https://camarahispanosueca.com/es">
+                            <img src="img/cchs-logo.png" alt="Miembro de la CCHS" title="Miembro de la Cámara de Comercio Hispano-sueca">
+
                         </a>
                     </div>
                 </div>
             </div>
+            <!-- SOCIAL MEDIA / LITTLE LOGOS -->
+            <div class="socialmedia_buttons">
+                <div class="littlebuttons">
+                    <div class="littlebutton linkedin-littlelogo">
+                        <a href="https://www.linkedin.com/company/ljudtopia">
+                            <img src="img/little_logo_linkedin.png" alt="LinkedIn" title="LinkedIn">
 
-            <div class="copyright">
-                <p>© 2025 Santiago López Rodríguez. Todos los derechos reservados.</p>
-                <p>Ljudtopia™ es una marca comercial en proceso de registro.</p>
+                        </a>
+                    </div>
+                    <div class="littlebutton youtube-littlelogo">
+                        <a href="https://www.youtube.com/@Ljudtopia">
+                            <img src="img/little_logo_youtube.png" alt="YouTube" title="Youtube">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton instagram-littlelogo">
+                        <a href="https://www.instagram.com/ljudtopia/">
+                            <img src="img/little_logo_instagram.png" alt="Instagram" title="Instagram">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton tiktok-littlelogo">
+                        <a href="https://www.tiktok.com/@ljudtopia">
+                            <img src="img/little_logo_tiktok.png" alt="TikTok" title="TikTok">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton facebook-littlelogo">
+                        <a href="https://www.facebook.com/people/Ljudtopia-Architecture-Wellbeing-Healing/pfbid02fx5u8hQ4ztdPZCPvBHvK4ZFYcmZpw7XugCApfx2MGjqeYs1ta63wVKAJ2Ga1CkFrl/?sk=about">
+                            <img src="img/little_logo_facebook.png" alt="Facebook" title="Facebook">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton twitter-x-littlelogo">
+                        <a href="https://x.com/@ljudtopia">
+                            <img src="img/little_logo_x-twitter.png" alt="Twitter-X" title="Twitter-X">
+
+                        </a>
+                    </div>
+                </div>
             </div>
+<!-- APARTADO Copyright e imagenes -->
+<div class="copyright">
+<p>© 2025 Santiago López Rodríguez. Todos los derechos reservados.</p>
+<p>Ljudtopia™ es una marca comercial en proceso de registro.</p>
+  <p style="font-size:10px; color:#6e7174; margin:0; line-height: 20px;">
+    Crédito de imágenes: Algunas imágenes utilizadas en este sitio web son cortesía de 
+    <a href="https://www.freepik.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Freepik</a> 
+    y 
+    <a href="https://www.pexels.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Pexels</a>.
+  </p>
+</div>
         </div>
     </footer>
     

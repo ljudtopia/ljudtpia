@@ -78,11 +78,11 @@
 <ul>
 <li><a href="homesve.html">Hem</a></li>
 <li><a href="archsve.html">Arkitektur</a></li>
+<li><a href="soundsve.html">Akustik</a></li>
 <li><a href="wellsve.html">Välbefinnande</a></li>
-<li><a href="intersve.html">Internationell</a></li>
-<li class="active"><a href="projsve.html">Projekt</a></li>
-<li><a href="mediasve.html">Media</a></li>
-<li><a href="contactsve.html">Kontakt</a></li>
+<li class="active"><a href="projsve.html">Portfölj</a></li>
+<li><a href="aboutsve.html">Företag</a></li>
+
 </ul>
 </div>
 </nav>
@@ -96,90 +96,20 @@
 </div>
 </div>
 </div>
-<style>
-            .image-carousel {
-                width: 100%;
-                overflow: hidden;
-                margin-top: 0px;
-                margin-left: 0px;
-            }
-            
-            .carousel-container {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-            }
-            
-            .carousel-container img {
-                width: 100%;
-                height: auto;
-                flex-shrink: 0;
-                object-fit: contain;
-            }
-        </style>
-<script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Array con los nombres de las imágenes (ajusta según tus archivos)
-                const images = [
-                    'project-001.jpg',
-                    'project-002.jpg',
-                    'project-003.jpg',
-                    'project-004.jpg',
-                    'project-005.jpg',
-                    'project-006.jpg',
-                    'project-007.jpg',
-                    'project-008.jpg',
-                    'project-009.jpg',
-                    'project-010.jpg',
-                    'project-011.jpg',
-                    'project-012.jpg',
-                    'project-013.jpg',
-                    'project-014.jpg',
-                    'project-015.jpg',
-                    'project-016.jpg',
-                    'project-017.jpg',
-                    'project-018.jpg',
-                    'project-019.jpg',
-                    'project-020.jpg',
-                    'project-021.jpg',
-                    'project-022.jpg'
-                    // Añade más imágenes según necesites
-                ];
-                
-                const carouselContainer = document.querySelector('.carousel-container');
-                const imgPath = 'img-projects/'; // Ruta a tu carpeta de imágenes
-                
-                // Crear elementos img y añadirlos al carrusel
-                images.forEach(img => {
-                    const imgElement = document.createElement('img');
-                    imgElement.src = imgPath + img;
-                    imgElement.alt = "Imagen de proyecto";
-                    carouselContainer.appendChild(imgElement);
-                });
-                
-                // Configurar el carrusel
-                let currentIndex = 0;
-                const totalImages = images.length;
-                
-                function updateCarousel() {
-                    const offset = -currentIndex * 100;
-                    carouselContainer.style.transform = `translateX(${offset}%)`;
-                }
-                
-                // Cambiar de imagen cada segundo
-                setInterval(() => {
-                    currentIndex = (currentIndex + 1) % totalImages;
-                    updateCarousel();
-                }, 2000);
-                
-                // Inicializar el carrusel
-                updateCarousel();
-            });
-        </script>
+
+
+<div class="carousel-container" 
+     data-carousel 
+     data-images='["project-001.jpg", "project-002.jpg"]'
+     data-interval="3000">
+</div>
+
+
 <div class="content-area">
 <!-- References section -->
 <section class="referencias">
 <h2>PROJEKTPORTFÖLJ</h2>
-<p>Projekt och samarbeten i urval bland våra 300+ referenser (se även ”Media”)</p>
+<p>Projekt och samarbeten i urval bland våra 300+ referenser</p>
 <div class="references-columns">
 <!-- Column 1: Architecture Projects -->
 <div class="reference-column">
@@ -202,6 +132,7 @@
         <li>Terrass på kommersiell byggnad (Stockholm, Sverige)</li>
         <li>Armerade betongmurar. Lycée Moliere (Villanueva de la Cañada)</li>
         <li>Stödmur i Sigüenza (Guadalajara)</li>
+        <li>Stödmur på Avenida comandante Franco (Madrid)</li>
         </ul>
     </div>
 <h4>Bas- och genomförandeprojekt (Bygglov- samt Bygg-handling)</h4>
@@ -399,6 +330,40 @@
 </ul>
 </div>
 </section>
+
+            <!-- Media List -->
+            <div class="media-links">
+                <h3>Länkar till våra sociala nätverk</h3>
+                <div class="media-content">
+                    <div class="media-logo">
+                        <img src="img/sidebar-logo_Ljudtopia.jpg" alt="Logo_Media_Ljudtopia">
+                    </div>
+                    <div class="media-buttons">
+                        <div class="mediabutton linkedin">
+                            <a href="https://www.linkedin.com/company/ljudtopia">
+                                <img src="img/linkedin-logo.png" alt="Linkedin-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton youtube">
+                            <a href="https://www.youtube.com/@Ljudtopia">
+                                <img src="img/youtube-logo.png" alt="Youtube-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton instagram">
+                            <a href="https://www.instagram.com/ljudtopia/">
+                                <img src="img/instagram-logo.png" alt="Instagram-button">
+                            </a>
+                        </div>
+                        <div class="mediabutton TikTok">
+                            <a href="https://www.tiktok.com/@ljudtopia">
+                                <img src="img/tiktok-logo.png" alt="TikTok-button">
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 </div>
 </main>
 <!-- Footer -->
@@ -408,11 +373,11 @@
 <ul>
 <li><a href="homesve.html">Hem</a></li>
 <li><a href="archsve.html">Arkitektur</a></li>
+<li><a href="soundsve.html">Akustik</a></li>
 <li><a href="wellsve.html">Välbefinnande</a></li>
-<li><a href="intersve.html">Internationell</a></li>
-<li class="active"><a href="projsve.html">Projekt</a></li>
-<li><a href="mediasve.html">Media</a></li>
-<li><a href="contactsve.html">Kontakt</a></li>
+<li class="active"><a href="projsve.html">Portfölj</a></li>
+<li><a href="aboutsve.html">Företag</a></li>
+
 </ul>
 </div>
 <div class="footer-contact">
@@ -421,34 +386,193 @@
 </ul>
 <p>🔊(+34) 667.817.991</p>
 </div>
-<div class="legal-links">
-<a href="#">Juridisk information</a>
-<a href="#">Integritetspolicy</a>
-</div>
+
+            <!-- APARTADO EMERGENTE AVISO LEGAL -->
+            <div class="legal-links">
+                <p>
+                <a class="aviso-link" onclick="openModal()">Juridisk Information</a>
+                &nbsp;|&nbsp;
+                <a class="aviso-link" onclick="openPrivacyModal()">Integritetspolicy</a>
+                </p>
+
+                <!-- Overlay Legal Advice-->
+                <div id="modalOverlay" class="modal-overlay">
+                    <div class="modal">
+                        <!-- NUEVA BARRA SUPERIOR -->
+                        <div class="modal-topbar">
+                            <span class="close-btn" onclick="closeModal()">&times;</span>
+                        </div>
+                        <!-- Encabezado a 20px por debajo de la línea de la X -->
+                        <div class="modal-header">
+                            <h2>Juridisk Information</h2>
+                            <img src="img/flag-sweden.png" alt="Svenska flagga">
+                        </div>
+                        <div class="modal-content">
+<p>I enlighet med spansk lag 34/2002 av den 11 juli om tjänster i informationssamhället och elektronisk handel (LSSI-CE) informeras användare om följande juridiska uppgifter:</p>
+
+<p><strong>Webbplatsens innehavare:</strong><br>
+Santiago López Rodríguez<br>
+Behörig arkitekt nr 14.976 vid Madrids arkitektkammare (COAM)<br>
+Skatte-ID (NIF): 07491829Q<br>
+Professionell adress: Avenida de la ONU, 32, 28936, Móstoles, Madrid, Spanien<br>
+Kontakt-e-post: <a href="mailto:info@ljudtopia.com">info@ljudtopia.com</a><br>
+Telefon: +34 667817991</p>
+
+<p>Innehavaren bedriver sin verksamhet som <strong>enskild näringsidkare (självständig)</strong> under <strong>varumärket ”Ljudtopia”</strong> och erbjuder tjänster inom arkitektur, byggnation, inredningsdesign, byggnadsakustik och teknisk rådgivning.</p>
+
+<p><strong>1. Syfte</strong></p>
+<p>Denna webbplats syftar till att tillhandahålla information om de professionella tjänster som ägaren erbjuder inom arkitektur, byggnation, inredningsdesign och akustik samt att underlätta kontakten med kunder och intressenter.</p>
+<p>Informationen på webbplatsen är endast vägledande och utgör inte bindande teknisk eller juridisk rådgivning.</p>
+
+<p><strong>2. Användarvillkor</strong></p>
+<p>Åtkomst till och användning av denna webbplats ger status som Användare, vilket innebär full acceptans av dessa villkor från och med att surfningen påbörjas.</p>
+<p>Användaren förbinder sig att använda innehållet på ett korrekt sätt och avstå från att använda det för olagliga syften, i strid med god tro eller på ett sätt som kan skada innehavarens eller tredje parts fysiska eller logiska system.</p>
+
+<p><strong>3. Immaterialrätt och industriellt rättsskydd</strong></p>
+<p>Allt innehåll på denna webbplats, inklusive texter, bilder, designer, logotyper, ritningar, dokument och andra element, skyddas av spansk lagstiftning om immateriella och industriella rättigheter.</p>
+<p>Fullständig eller delvis reproduktion, distribution eller bearbetning av sådant innehåll är förbjuden utan uttryckligt skriftligt tillstånd från innehavaren.</p>
+
+<p><strong>4. Externa länkar</strong></p>
+<p>Webbplatsen kan innehålla länkar till tredje parts sidor som endast tillhandahålls i informationssyfte.</p>
+<p>Innehavaren tar inget ansvar för innehåll, tillgänglighet eller integritetspolicyer på sådana externa sidor, vilka uteslutande är deras respektive ägares ansvar.</p>
+
+<p><strong>5. Ansvar</strong></p>
+<p>Innehavaren ansvarar inte för skador som kan uppstå på grund av störningar, avbrott, datorvirus, telefonfel eller frånkopplingar orsakade av omständigheter utanför dennes kontroll.</p>
+<p>Innehavaren garanterar inte heller att det inte förekommer fel i publicerat innehåll, men åtar sig att vidta alla nödvändiga åtgärder för att korrigera dem så snart som möjligt.</p>
+
+<p><strong>6. Skydd av personuppgifter</strong></p>
+<p>Behandling av personuppgifter som samlas in via denna webbplats regleras av Integritetspolicyn, i enlighet med förordning (EU) 2016/679 (GDPR) och spansk lag 3/2018 (LOPDGDD).</p>
+
+<p><strong>7. Cookiepolicy</strong></p>
+<p>Denna webbplats använder egna cookies och tredjepartscookies för att förbättra användarupplevelsen. Användningen av cookies regleras i Cookiepolicyn, där användning, syfte och hur de inaktiveras beskrivs.</p>
+
+<p><strong>8. Tillämplig lag och jurisdiktion</strong></p>
+<p>Detta juridiska meddelande regleras i alla avseenden av spansk lag. Vid tvist eller oenighet ska parterna underkasta sig domstolarna i den stad där innehavaren har sin professionella adress, om inte annan behörig domstol följer av tillämplig lag.</p>
+
+<p><strong>9. Ansvarsfriskrivning gällande arvodesskalkylatorn</strong></p>
+<p>Arvodesskalkylatorn och beräkningen av byggkostnad (PEM) på denna webbplats är uteslutande vägledande och informativ.</p>
+<p>De erhållna resultaten utgör inte ett bindande erbjudande, ett avtalsförslag eller en officiell taxa för yrkesarvoden.</p>
+<p>Arvoden för arkitekter och tekniker är fria enligt gällande regler (Lag 15/2007 om konkurrensskydd; Lag 7/1997 om liberaliseringsåtgärder avseende mark och yrkessammanslutningar).</p>
+<p>De uppskattade beloppen kan variera beroende på komplexitet, plats, planbestämmelser, tidsfrister, byggnadens egenskaper och varje kunds specifika behov.</p>
+<p>För en personlig offert krävs en individuell professionell förslagsförfrågan.</p>
+<p>Innehavaren tar inget ansvar för hur användare nyttjar de resultat som erhålls via detta verktyg.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal: Política de Privacidad -->
+                <div id="modalOverlayPrivacy" class="modal-overlay">
+                    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title">
+                    <!-- Barra superior con la X -->
+                        <div class="modal-topbar">
+                            <span class="close-btn" onclick="closePrivacyModal()">&times;</span>
+                        </div>
+
+                    <!-- Encabezado 20px por debajo de la línea de la X -->
+                        <div class="modal-header" style="margin-top:20px;">
+                            <h2 id="privacy-title">Integritetspolicy</h2>
+                            <!-- Usa el mismo archivo de bandera que en el otro modal -->
+                            <img src="img/flag-sweden.png" alt="Svenska flagga">
+                        </div>
+
+                    <!-- Zona con scroll si el texto es largo -->
+                        <div class="modal-content">
+                            <p>1. Personuppgiftsansvarig</p>
+                            <p>I enlighet med EU-förordning 2016/679 (GDPR) och den spanska Organiska lagen 3/2018 (LOPDGDD) informeras användarna om att personuppgifter som lämnas via denna webbplats behandlas av:</p>
+                            <p>Ansvarig: Santiago López Rodríguez, Skatte-ID: 07491829Q</p>
+                            <p>Adress: Avenida de la ONU, 32, 28936, Móstoles, Madrid, Spanien</p>
+                            <p>E-post: info@ljudtopia.com</p>
+                            <p>Telefon: +34 667817991</p>
+                            <p>2. Ändamål</p>
+                            <p>De personuppgifter som samlas in via kontaktformulären används uteslutande för att besvara förfrågningar, skicka begärd information eller hantera professionell kommunikation relaterad till företagets arkitektur-, bygg- och inredningstjänster.</p>
+                            <p>3. Rättslig grund</p>
+                            <p>Behandlingen av uppgifterna grundar sig på användarens uttryckliga samtycke, givet genom att acceptera denna integritetspolicy innan formuläret skickas.</p>
+                            <p>4. Lagringstid</p>
+                            <p>Personuppgifter lagras så länge den professionella relationen upprätthålls eller tills användaren begär radering, och i vilket fall som helst under de tidsfrister som lagen kräver.</p>
+                            <p>5. Mottagare</p>
+                            <p>Uppgifterna överförs inte till tredje part, förutom när det är ett lagstadgat krav eller nödvändigt för att tillhandahålla en tjänst direkt kopplad till den professionella verksamheten.</p>
+                            <p>6. Användarens rättigheter</p>
+                            <p>Användaren har rätt att när som helst utöva sina rättigheter till tillgång, rättelse, radering, invändning, begränsning av behandling och dataportabilitet, genom att skicka en begäran tillsammans med en kopia av sitt ID till ovanstående e-postadress.</p>
+                            <p>Vidare kan användaren lämna in ett klagomål till den Spanska dataskyddsmyndigheten (AEPD) om behandlingen anses strida mot gällande lag.</p>
+                            <p>7. Datasäkerhet</p>
+                            <p>Den ansvarige vidtar nödvändiga tekniska och organisatoriska åtgärder för att säkerställa skydd och sekretess för personuppgifter och förhindra obehörig åtkomst, ändring eller förlust.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 <!-- Associations logos / sellos section -->
 <div class="associations">
 <h3>Medlem i:</h3>
 <p></p>
 <div class="members">
-<div class="logomember coam-logo">
-<a href="https://coam.org">
-<img alt="Miembro del COAM" src="img/coam-logo.jpg" title="Miembro del Colegio Oficial de Arquitectos de Madrid"/>
-<h4></h4>
-<p></p>
-</a>
+                    <div class="logomember colegiado_coam">
+                        <a href="https://www.coam.org/red-arquitectos/arquitecto/?arquitecto=santiago-lopez-rodriguez&id_coleg=14976">
+                            <img alt="Medlem i COAM" src="img/colegiado_coam.jpg" title="Medlem i Colegio Oficial de Arquitectos de Madrid"/>
+
+                        </a>
+                    </div>
+
+                    <div class="logomember cchs-logo">
+                        <a href="https://camarahispanosueca.com/es">
+                            <img src="img/cchs-logo.png" alt="Medlem i CCHS" title="Medlem i Cámara de Comercio Hispano-sueca">
+
+                        </a>
+                    </div>
 </div>
-<div class="logomember cscae-logo">
-<a href="https://www.cscae.com">
-<img alt="Miembro del CSCAE" src="img/cscae-logo.png" title="Miembro del Consejo Superior de Colegios de Arquitectos de España"/>
-<h4></h4>
-<p></p>
-</a>
 </div>
-</div>
-</div>
+            <!-- SOCIAL MEDIA / LITTLE LOGOS -->
+            <div class="socialmedia_buttons">
+                <div class="littlebuttons">
+                    <div class="littlebutton linkedin-littlelogo">
+                        <a href="https://www.linkedin.com/company/ljudtopia">
+                            <img src="img/little_logo_linkedin.png" alt="LinkedIn" title="LinkedIn">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton youtube-littlelogo">
+                        <a href="https://www.youtube.com/@Ljudtopia">
+                            <img src="img/little_logo_youtube.png" alt="YouTube" title="Youtube">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton instagram-littlelogo">
+                        <a href="https://www.instagram.com/ljudtopia/">
+                            <img src="img/little_logo_instagram.png" alt="Instagram" title="Instagram">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton tiktok-littlelogo">
+                        <a href="https://www.tiktok.com/@ljudtopia">
+                            <img src="img/little_logo_tiktok.png" alt="TikTok" title="TikTok">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton facebook-littlelogo">
+                        <a href="https://www.facebook.com/people/Ljudtopia-Architecture-Wellbeing-Healing/pfbid02fx5u8hQ4ztdPZCPvBHvK4ZFYcmZpw7XugCApfx2MGjqeYs1ta63wVKAJ2Ga1CkFrl/?sk=about">
+                            <img src="img/little_logo_facebook.png" alt="Facebook" title="Facebook">
+
+                        </a>
+                    </div>
+                    <div class="littlebutton twitter-x-littlelogo">
+                        <a href="https://x.com/@ljudtopia">
+                            <img src="img/little_logo_x-twitter.png" alt="Twitter-X" title="Twitter-X">
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!-- APARTADO Copyright e imagenes -->
 <div class="copyright">
 <p>© 2025 Santiago López Rodríguez. Alla rättigheter förbehållna.</p>
 <p>Ljudtopia™ är ett varumärke under registrering.</p>
+  <p style="font-size:10px; color:#6e7174; margin:0; line-height: 20px;">
+    Bildkredit: Vissa bilder som används på denna webbplats är från 
+    <a href="https://www.freepik.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Freepik</a> 
+    och 
+    <a href="https://www.pexels.com" target="_blank" rel="noopener" 
+       style="color:#c6bcb6; text-decoration:none;">Pexels</a>.
+  </p>
 </div>
 </div>
 </footer>
