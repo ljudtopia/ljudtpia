@@ -385,6 +385,70 @@ initCarousel();
         } catch(_) {}
     })();
 
+        // === AVISO NO-COOKIES: solo 1ª vez por pestaña/ventana (sessionStorage) ===
+    (function () {
+    const ov = document.getElementById('modalOverlayNoCookies');
+    if (!ov) return;
+
+    const acceptBtn = ov.querySelector('#ncAcceptBtn');
+
+    // Clave de sesión (visible 1 sola vez por pestaña/ventana)
+    const KEY = 'LJUDTOPIA:ncSeen:homeesp:session:v1';
+
+    let openedThisLoad = false;
+
+    const alreadySeen = () => {
+        try { return sessionStorage.getItem(KEY) === '1'; } catch { return false; }
+    };
+    const markSeen = () => {
+        try { sessionStorage.setItem(KEY, '1'); } catch {}
+    };
+
+    function showIfNeeded() {
+        if (openedThisLoad || alreadySeen()) return;
+        ov.style.display = 'block';
+        document.body.classList.add('no-scroll');
+        openedThisLoad = true;
+        (acceptBtn || ov).focus?.();
+    }
+
+    function hideAndRemember() {
+        ov.style.display = 'none';
+        markSeen(); // no volverá a mostrarse en esta pestaña/ventana
+        if (!anyModalOpen()) document.body.classList.remove('no-scroll');
+    }
+
+    // Botón Aceptar
+    acceptBtn && acceptBtn.addEventListener('click', hideAndRemember);
+
+    // Cierre por clic fuera o ESC -> también cuenta como visto
+    window.addEventListener('click', (e) => { if (e.target === ov) hideAndRemember(); });
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && ov.style.display === 'block') hideAndRemember();
+    });
+
+    // Enlaces internos del aviso (abre tus modales y recuerda como visto)
+    ov.addEventListener('click', (e) => {
+        const legal = e.target.closest('.nc-open-legal');
+        const privacy = e.target.closest('.nc-open-privacy');
+        if (!legal && !privacy) return;
+        e.preventDefault();
+        hideAndRemember();
+        if (legal   && typeof window.openModal === 'function')         setTimeout(window.openModal, 60);
+        if (privacy && typeof window.openPrivacyModal === 'function')  setTimeout(window.openPrivacyModal, 60);
+    });
+
+    // Mostrar al cargar si procede
+    document.addEventListener('DOMContentLoaded', showIfNeeded);
+
+    // Soporte BFCache (volver con “atrás”): reintenta, pero sessionStorage evita reabrir
+    window.addEventListener('pageshow', (e) => {
+        if (e.persisted) openedThisLoad = false;
+        showIfNeeded();
+    });
+    })();
+
+
     console.log('🏁 LJUDTOPIA JavaScript completado');
 });
 
@@ -453,3 +517,5 @@ initCarousel();
     });
   });
 })();
+
+
